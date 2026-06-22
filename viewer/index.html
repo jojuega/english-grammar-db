@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Grammar Database — Interactive Tree</title>
+<style>
+:root {--bg:#0d1117;--s:#161b22;--b:#30363d;--t:#c9d1d9;--dim:#8b949e;--a:#58a6ff;
+  --c1:#58a6ff;--c2:#3fb950;--c3:#d2991d;--c4:#db6d28;--c5:#f778ba;--c6:#bc8cff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--t);display:flex;height:100vh;overflow:hidden}
+aside{width:260px;min-width:260px;background:var(--s);border-right:1px solid var(--b);display:flex;flex-direction:column;overflow-y:auto}
+aside h1{font-size:13px;padding:14px;border-bottom:1px solid var(--b);color:var(--a)}
+aside section{padding:10px 14px;border-bottom:1px solid var(--b)}
+aside label{display:block;font-size:10px;text-transform:uppercase;color:var(--dim);margin-bottom:4px;letter-spacing:.5px}
+aside select,aside input{width:100%;padding:7px 8px;background:var(--bg);border:1px solid var(--b);border-radius:5px;color:var(--t);font-size:12px}
+aside .btn{display:block;width:100%;padding:7px;margin:3px 0;background:var(--b);border:none;border-radius:5px;color:var(--t);cursor:pointer;font-size:11px;text-align:left;transition:background .15s}
+aside .btn:hover{background:#3a4450}
+aside .btn.active{background:var(--a);color:#000;font-weight:600}
+aside .stats{font-size:10px;color:var(--dim);line-height:1.6}
+aside .stats strong{color:var(--a)}
+main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+header{padding:10px 16px;border-bottom:1px solid var(--b);display:flex;gap:10px;align-items:center;background:var(--s)}
+header input{flex:1;padding:9px 12px;background:var(--bg);border:1px solid var(--b);border-radius:7px;color:var(--t);font-size:13px}
+header input::placeholder{color:var(--dim)}
+header .count{font-size:11px;color:var(--dim);white-space:nowrap}
+#tree{flex:1;overflow-y:auto;padding:4px 0}
+.tn{margin:0;padding:0}
+.tr{display:flex;align-items:center;padding:3px 10px;cursor:pointer;border-left:3px solid transparent;transition:background .1s;min-height:28px}
+.tr:hover{background:rgba(88,166,255,.07)}
+.tw{width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:var(--dim);flex-shrink:0;margin-right:2px;transition:transform .15s}
+.tw.open{transform:rotate(90deg)}
+.ti{margin-right:4px;font-size:13px;flex-shrink:0}
+.tl{font-size:12px;line-height:1.4;flex:1;overflow:hidden;text-overflow:ellipsis}
+.tl .hl{background:rgba(210,153,29,.4);border-radius:2px;padding:0 1px}
+.tb{font-size:9px;padding:1px 5px;border-radius:3px;font-weight:600;margin-left:6px;flex-shrink:0}
+.tc{overflow:hidden;transition:max-height .2s ease}
+.tc.hidden{max-height:0!important}
+.l1{color:var(--c1)}.b1{background:rgba(88,166,255,.18);color:var(--c1)}
+.l2{color:var(--c2)}.b2{background:rgba(63,185,80,.18);color:var(--c2)}
+.l3{color:var(--c3)}.b3{background:rgba(210,153,29,.18);color:var(--c3)}
+.l4{color:var(--c4)}.b4{background:rgba(219,109,40,.18);color:var(--c4)}
+.l5{color:var(--c5)}.b5{background:rgba(247,119,186,.18);color:var(--c5)}
+.l6{color:var(--c6)}.b6{background:rgba(188,140,255,.18);color:var(--c6)}
+@media(max-width:768px){body{flex-direction:column}aside{width:100%;min-width:100%;max-height:180px}}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--b);border-radius:2px}
+</style>
+</head>
+<body>
+
+<aside>
+<h1>📚 Grammar DB</h1>
+<section><label>Sistema</label>
+<button class="btn active" onclick="switchSys('CEFR',this)">🇪🇺 CEFR (A1→C2)</button>
+<button class="btn" onclick="switchSys('American',this)">🇺🇸 American (L1→L6)</button></section>
+<section><label>Filtrar nivel</label>
+<select id="lf" onchange="render()"><option value="all">Todos</option></select></section>
+<section>
+<button class="btn" onclick="expandAll()">📂 Expandir todo</button>
+<button class="btn" onclick="collapseAll()">📁 Colapsar todo</button></section>
+<section><label>Estadísticas</label><div class="stats" id="sp"></div></section>
+<section style="font-size:9px;color:var(--dim);text-align:center;padding:10px">1,311 grammar points<br>30 grammar domains</section>
+</aside>
+
+<main>
+<header>
+<input id="q" placeholder="🔍 Buscar (ej: subjunctive, inversion, present perfect)..." oninput="render()">
+<span class="count" id="rc"></span>
+</header>
+<div id="tree"></div>
+</main>
+
+<script>
+let db=null, sys='CEFR', exp=new Set();
+const LC=['l1','l2','l3','l4','l5','l6'], BC=['b1','b2','b3','b4','b5','b6'];
+const SM={CEFR:{emoji:'🇪🇺',lv:['A1 - Beginner','A2 - Elementary','B1 - Intermediate','B2 - Upper Intermediate','C1 - Advanced','C2 - Proficiency']},American:{emoji:'🇺🇸',lv:['Level 1 - Beginner','Level 2 - High Beginner','Level 3 - Intermediate','Level 4 - High Intermediate','Level 5 - Advanced','Level 6 - High Advanced']}};
+
+async function init(){
+  try{const r=await fetch('data/english_grammar_cefr.json');db=await r.json();setup();}
+  catch(e){document.getElementById('tree').innerHTML=`<div style="padding:40px;text-align:center;color:var(--dim)">❌ Error cargando datos: ${e.message}</div>`}
+}
+function setup(){
+  const s=document.getElementById('lf');SM.CEFR.lv.forEach((l,i)=>{const o=document.createElement('option');o.value=l;o.textContent=`${i+1}. ${l}`;s.appendChild(o)});
+  render();
+}
+async function switchSys(s,b){sys=s;document.querySelectorAll('aside .btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');exp.clear();
+  const file='data/english_grammar_'+s.toLowerCase()+'.json';
+  try{const r=await fetch(file);db=await r.json()}catch(e){console.error(e)}
+  const lf=document.getElementById('lf');lf.innerHTML='<option value="all">Todos</option>';SM[s].lv.forEach((l,i)=>{const o=document.createElement('option');o.value=l;o.textContent=`${i+1}. ${l}`;lf.appendChild(o)});
+  render();}
+function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+function hl(t,q){return q?t.replace(new RegExp(`(${esc(q)})`,'gi'),'<span class="hl">$1</span>'):t}
+function render(){
+  if(!db){document.getElementById('tree').innerHTML='<div style="padding:40px;text-align:center;color:var(--dim)">Cargando datos...</div>';return}
+  const q=document.getElementById('q').value.toLowerCase().trim(),lf=document.getElementById('lf').value;
+  const lvls=db.levels,tree=document.getElementById('tree');
+  let h='',total=0;
+  Object.entries(lvls).forEach(([ln,ld],li)=>{if(lf!=='all'&&ln!==lf)return;
+    let lh='',lv=0,lm=false;
+    (ld.categories||[]).forEach(c=>{let ch='',cv=0,cm=false;
+      (c.subs||[]).forEach(sb=>{let sh='',sv=0,sm=false;
+        (sb.points||[]).forEach(pt=>{if(!q||pt.toLowerCase().includes(q)){sm=sv=1;sh+=`<div class="tr" style="padding-left:56px"><span class="ti">•</span><span class="tl">${hl(pt,q)}</span></div>`}});
+        if(sm||!q){cm=cv=1;const id=`s${li}${cv}${Math.random().toString(36).slice(2,6)}`,op=exp.has(id);
+          ch+=`<div class="tn"><div class="tr" style="padding-left:36px" data-id="${id}"><span class="tw${op?' open':''}">▶</span><span class="ti">📋</span><span class="tl">${hl(sb.subcategory,q)}</span><span class="tb ${BC[li]}">${(sb.points||[]).length}pts</span></div><div class="tc${op?'':' hidden'}">${sh}</div></div>`}
+      });
+      if(cm||!q){lm=lv=1;const id=`c${li}${cv}${Math.random().toString(36).slice(2,6)}`,op=exp.has(id);
+        lh+=`<div class="tn"><div class="tr" style="padding-left:18px" data-id="${id}"><span class="tw${op?' open':''}">▶</span><span class="ti">📁</span><span class="tl">${hl(c.category,q)}</span><span class="tb ${BC[li]}">${cv}sub</span></div><div class="tc${op?'':' hidden'}">${ch}</div></div>`}
+    });
+    if(lm||!q){const id=`l${li}`,op=exp.has(id)||!!q;if(q)exp.add(id);
+      h+=`<div class="tn"><div class="tr ${LC[li]}" data-id="${id}"><span class="tw${op?' open':''}">▶</span><span class="ti">📊</span><span class="tl"><strong>${ln}</strong></span><span class="tb ${BC[li]}">${lv}sub</span></div><div class="tc${op?'':' hidden'}">${lh}</div></div>`;
+      total+=lv}
+  });
+  if(!h)h='<div style="padding:40px;text-align:center;color:var(--dim)">Sin resultados para "<strong>'+q+'</strong>"</div>';
+  tree.innerHTML=h;
+  document.getElementById('rc').textContent=total+' resultados';
+  document.getElementById('sp').innerHTML=(()=>{let s='',gt=0;Object.entries(lvls).forEach(([ln,ld],i)=>{let c=0;(ld.categories||[]).forEach(x=>{(x.subs||[]).forEach(y=>{c+=(y.points||[]).length})});gt+=c;s+=`<span class="${LC[i]}">●</span> ${ln.split(' - ')[0]}: <strong>${c}</strong> pts<br>`});return s+`<br>Total: <strong>${gt}</strong> puntos`})();
+}
+document.getElementById('tree').addEventListener('click',function(e){
+  const tr=e.target.closest('.tr');if(!tr||!tr.dataset.id)return;
+  const id=tr.dataset.id,tn=tr.closest('.tn'),tc=tn.querySelector('.tc'),tw=tr.querySelector('.tw');
+  if(!tc)return;
+  if(exp.has(id)){exp.delete(id);tc.classList.add('hidden');tw.classList.remove('open')}
+  else{exp.add(id);tc.classList.remove('hidden');tw.classList.add('open');tc.style.maxHeight=tc.scrollHeight+'px'}
+});
+function expandAll(){
+  document.querySelectorAll('.tr[data-id]').forEach(r=>{exp.add(r.dataset.id);const n=r.closest('.tn');if(n){const c=n.querySelector('.tc');if(c)c.classList.remove('hidden');r.querySelector('.tw')?.classList.add('open')}})
+}
+function collapseAll(){exp.clear();render()}
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();document.getElementById('q').focus()}if(e.key==='Escape'){document.getElementById('q').value='';render()}});
+init();
+</script>
+</body>
+</html>

@@ -26,7 +26,7 @@
                 "Present simple: negative with don't/doesn't (I don't work, She doesn't play)",
                 "Present simple: questions with Do/Does (Do you work?, Does she play?)",
                 "Present simple: short answers (Yes, I do. / No, she doesn't.)",
-                "Present simple for habits and routines (I wake up at 7 every day)",
+                "Present simple for habits and routines (I wake up at 7 every day) [🇬🇧→🇺🇸 BrE/AmE: Both woke and waked accepted; waked especially in ... → see discrepancies DB #BA-021]",
                 "Present simple for general facts (The sun rises in the east)",
                 "Present simple with adverbs of frequency (always, usually, often, sometimes, never)",
                 "Position of adverbs of frequency (before main verb, after 'to be')"
@@ -45,10 +45,10 @@
             {
               "subcategory": "Have got",
               "points": [
-                "Have got: affirmative (I've got, She's got)",
-                "Have got: negative (I haven't got, She hasn't got)",
-                "Have got: questions (Have you got?, Has she got?)",
-                "Have got vs have: basic usage for possession"
+                "Have got: affirmative (I've got, She's got) [🇬🇧→🇺🇸 BrE/AmE: Have (without got) is preferred: 'I have two cousi... → see discrepancies DB #BA-025]",
+                "Have got: negative (I haven't got, She hasn't got) [🇬🇧→🇺🇸 BrE/AmE: Have (without got) is preferred: 'I have two cousi... → see discrepancies DB #BA-025]",
+                "Have got: questions (Have you got?, Has she got?) [🇬🇧→🇺🇸 BrE/AmE: Have (without got) is preferred: 'I have two cousi... → see discrepancies DB #BA-025]",
+                "Have got vs have: basic usage for possession [🇬🇧→🇺🇸 BrE/AmE: Have (without got) is preferred: 'I have two cousi... → see discrepancies DB #BA-025]"
               ]
             }
           ]
@@ -93,14 +93,14 @@
               "subcategory": "Be going to",
               "points": [
                 "Be going to: affirmative, negative, questions",
-                "Be going to for plans and intentions",
+                "Be going to for plans and intentions [🇬🇧→🇺🇸 BrE/AmE: Be going to common (informal gonna): 'You're gonna... → see discrepancies DB #BA-004]",
                 "Be going to for predictions based on evidence (Look at those clouds, it's going to rain)"
               ]
             },
             {
               "subcategory": "Shall",
               "points": [
-                "Shall for suggestions with I/we (Shall I open the window?)",
+                "Shall for suggestions with I/we (Shall I open the window?) [🇬🇧→🇺🇸 BrE/AmE: Alternatives used: 'Should/Can I...?' for offers; ... → see discrepancies DB #BA-029]",
                 "Shall for offers (Shall I help you?)"
               ]
             }
@@ -276,7 +276,7 @@
               "subcategory": "Yes/No Questions",
               "points": [
                 "Yes/No questions with 'to be' (Are you tired?)",
-                "Yes/No questions with 'have got'",
+                "Yes/No questions with 'have got' [🇬🇧→🇺🇸 BrE/AmE: Have (without got) is preferred: 'I have two cousi... → see discrepancies DB #BA-025]",
                 "Yes/No questions with present simple: Do/Does",
                 "Yes/No questions with past simple: Did"
               ]
@@ -349,7 +349,7 @@
                 "fall → fell → fallen",
                 "feel → felt → felt",
                 "find → found → found",
-                "get → got → got/gotten (AmE: got for receiving, gotten otherwise; BrE: got)",
+                "get → got → got/gotten (AmE: got for receiving, gotten otherwise; BrE: got) [🇬🇧→🇺🇸 BrE/AmE: Past participle is gotten when meaning 'obtained/b... → see discrepancies DB #BA-005]",
                 "give → gave → given",
                 "grow → grew → grown",
                 "have → had → had",
@@ -358,7 +358,7 @@
                 "keep → kept → kept",
                 "know → knew → known",
                 "lead → led → led",
-                "learn → learned/learnt → learned/learnt (AmE: regular; BrE: both)",
+                "learn → learned/learnt → learned/learnt (AmE: regular; BrE: both) [🇬🇧→🇺🇸 BrE/AmE: Learned is the ONLY standard form (learnt is rare/... → see discrepancies DB #BA-008]",
                 "leave → left → left",
                 "let → let → let",
                 "lose → lost → lost",
@@ -395,7 +395,7 @@
               "description": "Basic phrasal verbs describing visible, physical actions. Source: Cambridge EVP (4 at A1).",
               "points": [
                 "get up — leave your bed after sleeping",
-                "wake up — stop sleeping",
+                "wake up — stop sleeping [🇬🇧→🇺🇸 BrE/AmE: Both woke and waked accepted; waked especially in ... → see discrepancies DB #BA-021]",
                 "sit down — move into a sitting position",
                 "stand up — rise to a standing position",
                 "come in — enter a room or building",
@@ -444,7 +444,7 @@
                 "Exclamation mark (!): used at the end of exclamations and strong commands (What a beautiful day! Sit down! Help!)",
                 "Comma (,): used to separate items in a list of three or more (I bought apples, oranges, bananas and milk)",
                 "Comma (,): used before 'and'/'but'/'or' when joining two independent clauses (I like tea, but she likes coffee)",
-                "Capitalization: days of the week, months, and holidays (Monday, January, Christmas)",
+                "Capitalization: days of the week, months, and holidays (Monday, January, Christmas) [🇬🇧→🇺🇸 BrE/AmE: TAKE a vacation: 'Where are you going on vacation?... → see discrepancies DB #BA-047]",
                 "Capitalization: nationalities, languages, and countries (Spanish, English, French, Germany, Japan, American)",
                 "No capitalization for seasons (spring, summer, fall, winter) unless part of a title"
               ]
@@ -471,9 +471,9 @@
             {
               "subcategory": "Present Perfect",
               "points": [
-                "Present perfect: form have/has + past participle",
-                "Present perfect for life experiences (I've been to Paris) with ever/never",
-                "Present perfect with just, already, yet",
+                "Present perfect: form have/has + past participle [🇬🇧→🇺🇸 BrE/AmE: Simple past ACCEPTED (and common) with just, alrea... → see discrepancies DB #BA-001]",
+                "Present perfect for life experiences (I've been to Paris) with ever/never [🇬🇧→🇺🇸 BrE/AmE: Simple past accepted: 'I lost my key' (even if sti... → see discrepancies DB #BA-002]",
+                "Present perfect with just, already, yet [🇬🇧→🇺🇸 BrE/AmE: Simple past ACCEPTED (and common) with just, alrea... → see discrepancies DB #BA-001]",
                 "Present perfect with for and since (duration vs starting point)",
                 "Present perfect vs past simple: basic distinction (experience vs specific time)"
               ]
@@ -504,8 +504,8 @@
               "subcategory": "Past Perfect",
               "points": [
                 "Past perfect: had + past participle",
-                "Past perfect for actions before another past action",
-                "Past perfect with already, just, never"
+                "Past perfect for actions before another past action [🇬🇧→🇺🇸 BrE/AmE: Past perfect used more frequently, especially to d... → see discrepancies DB #BA-003]",
+                "Past perfect with already, just, never [🇬🇧→🇺🇸 BrE/AmE: Past perfect used more frequently, especially to d... → see discrepancies DB #BA-003]"
               ]
             },
             {
@@ -525,7 +525,7 @@
               "subcategory": "Will vs Going to",
               "points": [
                 "Will for predictions without evidence (I think it will rain)",
-                "Going to for plans and intentions; predictions with evidence",
+                "Going to for plans and intentions; predictions with evidence [🇬🇧→🇺🇸 BrE/AmE: Be going to common (informal gonna): 'You're gonna... → see discrepancies DB #BA-004]",
                 "Will for spontaneous decisions vs going to for pre-planned intentions",
                 "Present continuous for future arrangements (I'm meeting her tomorrow)",
                 "Present simple for timetabled future (The flight leaves at 8)"
@@ -562,7 +562,7 @@
               "subcategory": "Other Modals",
               "points": [
                 "Could for past ability; Could for polite requests (Could you help me?)",
-                "Can/can't: extended uses; Need to / needn't for necessity; Shall for suggestions"
+                "Can/can't: extended uses; Need to / needn't for necessity; Shall for suggestions [🇬🇧→🇺🇸 BrE/AmE: Alternatives used: 'Should/Can I...?' for offers; ... → see discrepancies DB #BA-029]"
               ]
             }
           ]
@@ -590,7 +590,7 @@
               "points": [
                 "Second conditional: If + past simple, would + infinitive (If I had money, I'd travel)",
                 "Second conditional for unreal/hypothetical present/future",
-                "If I were...; Wish + past simple for present wishes (I wish I was taller)"
+                "If I were...; Wish + past simple for present wishes (I wish I was taller) [🇬🇧→🇺🇸 BrE/AmE: Were-subjunctive preserved: 'If I were you...', 'I... → see discrepancies DB #BA-051]"
               ]
             }
           ]
@@ -670,9 +670,9 @@
               "subcategory": "Verb Patterns Extended",
               "points": [
                 "Verb + -ing (enjoy, finish, mind, suggest, recommend, keep, avoid)",
-                "Verb + to-infinitive (want, decide, hope, expect, offer, promise, refuse, learn, plan, agree)",
+                "Verb + to-infinitive (want, decide, hope, expect, offer, promise, refuse, learn, plan, agree) [🇬🇧→🇺🇸 BrE/AmE: Learned is the ONLY standard form (learnt is rare/... → see discrepancies DB #BA-008]",
                 "Verb + -ing OR to-infinitive same meaning (start, begin, continue)",
-                "Verb + -ing OR to-infinitive different meaning (remember, forget, try, stop)",
+                "Verb + -ing OR to-infinitive different meaning (remember, forget, try, stop) [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Preposition + -ing (good at, interested in, tired of)",
                 "Expressing purpose with 'to' and 'for'"
               ]
@@ -705,7 +705,7 @@
             {
               "subcategory": "Phrasal Verbs",
               "points": [
-                "Common phrasal verbs: get up, wake up, turn on/off, put on, take off, pick up",
+                "Common phrasal verbs: get up, wake up, turn on/off, put on, take off, pick up [🇬🇧→🇺🇸 BrE/AmE: Both woke and waked accepted; waked especially in ... → see discrepancies DB #BA-021]",
                 "Transitive/intransitive; separable/inseparable phrasal verbs",
                 "Verb + preposition combinations (look at, listen to, wait for)"
               ]
@@ -735,8 +735,8 @@
             {
               "subcategory": "Question Tags",
               "points": [
-                "Question tags: basic positive-negative pattern (You're tired, aren't you?)",
-                "Question tags with auxiliary verbs"
+                "Question tags: basic positive-negative pattern (You're tired, aren't you?) [🇬🇧→🇺🇸 BrE/AmE: Question tags are LESS FREQUENT. Alternatives like... → see discrepancies DB #BA-056]",
+                "Question tags with auxiliary verbs [🇬🇧→🇺🇸 BrE/AmE: Question tags are LESS FREQUENT. Alternatives like... → see discrepancies DB #BA-056]"
               ]
             }
           ]
@@ -794,7 +794,7 @@
                 "teach → taught → taught",
                 "tear → tore → torn",
                 "throw → threw → thrown",
-                "wake → woke → woken",
+                "wake → woke → woken [🇬🇧→🇺🇸 BrE/AmE: Both woke and waked accepted; waked especially in ... → see discrepancies DB #BA-021]",
                 "win → won → won"
               ]
             }
@@ -827,7 +827,7 @@
                 "lie down — put your body in a horizontal position",
                 "run away — escape by running",
                 "throw away — discard something",
-                "try on — put on clothing to test fit",
+                "try on — put on clothing to test fit [🇬🇧→🇺🇸 BrE/AmE: Fit is used as past tense: 'The shirt fit him.'... → see discrepancies DB #BA-015]",
                 "write down — record in writing",
                 "give back — return something to its owner",
                 "take back — return something to where it was",
@@ -853,7 +853,7 @@
                 "Clause elements: Subject (S) — who or what the sentence is about",
                 "Clause elements: Verb (V) — the action or state",
                 "Clause elements: Object (O) — who or what receives the action (direct object)",
-                "Clause elements: Indirect Object (IO) — who benefits from the action (She gave me a book)",
+                "Clause elements: Indirect Object (IO) — who benefits from the action (She gave me a book) [🇬🇧→🇺🇸 BrE/AmE: Fit is used as past tense: 'The shirt fit him.'... → see discrepancies DB #BA-015]",
                 "Direct vs indirect objects: word order (She gave a book to me = She gave me a book)",
                 "Transitive verbs: verbs that require a direct object (I bought a car, She likes music)",
                 "Intransitive verbs: verbs that do not take an object (He arrived, She smiled, They laughed)",
@@ -880,7 +880,7 @@
                 "Period/comma placement inside quotation marks in American English (She said \"I'm tired.\" He replied \"No,\" she said)",
                 "Comma (,): after introductory words/phrases (Well, I think so. However, he was late. First, mix the ingredients.)",
                 "Comma (,): used with direct address (John, can you help me? I'm sorry, sir. Thanks, Mary.)",
-                "Comma (,): used in dates (June 5, 2024) and addresses (London, England, 10 Downing Street)",
+                "Comma (,): used in dates (June 5, 2024) and addresses (London, England, 10 Downing Street) [🇬🇧→🇺🇸 BrE/AmE: on + street: 'She lives on Main Street.'... → see discrepancies DB #BA-034]",
                 "Comma (,): used after 'Yes' and 'No' in responses (Yes, I do. No, I don't think so.)",
                 "Capitalization: titles of books, movies, songs, TV shows (The Lord of the Rings, Titanic, Yesterday)",
                 "Capitalization: capitalize the first and last words and all major words in titles; do not capitalize articles, conjunctions, or short prepositions in the middle (The Cat in the Hat, Gone with the Wind)"
@@ -1057,7 +1057,7 @@
               "points": [
                 "A/an, the, zero article: comprehensive rules",
                 "Articles with geographical names (the UK, Mount Everest, the Atlantic)",
-                "Articles with institutions (school, hospital, prison: with/without the)",
+                "Articles with institutions (school, hospital, prison: with/without the) [🇬🇧→🇺🇸 BrE/AmE: THE required: 'He's in THE hospital' (patient), 'S... → see discrepancies DB #BA-043]",
                 "Articles with musical instruments (play the piano) vs sports (play tennis)"
               ]
             },
@@ -1101,10 +1101,10 @@
               "subcategory": "Verb Patterns",
               "points": [
                 "Verb + -ing (admit, avoid, consider, deny, enjoy, finish, imagine, mind, miss, practise, risk, suggest)",
-                "Verb + to-infinitive (afford, agree, appear, arrange, decide, expect, hope, learn, manage, offer, plan, promise, refuse, seem, tend, threaten, want)",
+                "Verb + to-infinitive (afford, agree, appear, arrange, decide, expect, hope, learn, manage, offer, plan, promise, refuse, seem, tend, threaten, want) [🇬🇧→🇺🇸 BrE/AmE: Learned is the ONLY standard form (learnt is rare/... → see discrepancies DB #BA-008]",
                 "Verb + object + to-infinitive (advise, ask, encourage, expect, invite, order, persuade, recommend, remind, teach, tell, warn)",
                 "Verb + object + infinitive without to (let, make, help)",
-                "Verb + -ing or to-infinitive with different meaning (remember, forget, regret, try, stop, mean, go on)",
+                "Verb + -ing or to-infinitive with different meaning (remember, forget, regret, try, stop, mean, go on) [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Adjective + to-infinitive; Too + adjective + to-infinitive; Adj + enough + to-infinitive",
                 "Verb + preposition + gerund: insist on doing, apologize for being, succeed in doing, approve of doing, decide against doing",
                 "Verb + object + preposition + gerund: accuse someone of (doing), blame someone for (doing), congratulate someone on (doing), thank someone for (doing), prevent someone from (doing)"
@@ -1153,7 +1153,7 @@
             {
               "subcategory": "Question Tags",
               "points": [
-                "Question tags with all auxiliary verbs (isn't it?, don't you?, haven't you?, can't you?)",
+                "Question tags with all auxiliary verbs (isn't it?, don't you?, haven't you?, can't you?) [🇬🇧→🇺🇸 BrE/AmE: Question tags are LESS FREQUENT. Alternatives like... → see discrepancies DB #BA-056]",
                 "Positive-negative and negative-positive patterns",
                 "Tags with 'let's' (Let's go, shall we?); Tags with imperatives; Intonation patterns"
               ]
@@ -1205,7 +1205,7 @@
                 "bleed → bled → bled",
                 "blow → blew → blown",
                 "broadcast → broadcast → broadcast",
-                "burn → burned/burnt → burned/burnt (AmE: burned; BrE: both)",
+                "burn → burned/burnt → burned/burnt (AmE: burned; BrE: both) [🇬🇧→🇺🇸 BrE/AmE: Burned is strongly preferred; burnt is rare.... → see discrepancies DB #BA-006]",
                 "burst → burst → burst",
                 "creep → crept → crept",
                 "deal → dealt → dealt",
@@ -1388,7 +1388,7 @@
                 "Can, could, may, might for permission: full range",
                 "Must, have to, need to, be supposed to for obligation",
                 "Mustn't, can't, may not, not be allowed to for prohibition",
-                "Needn't, don't have to, don't need to for lack of obligation",
+                "Needn't, don't have to, don't need to for lack of obligation [🇬🇧→🇺🇸 BrE/AmE: Don't need to (regular verb form) is standard: 'Yo... → see discrepancies DB #BA-030]",
                 "Be to + infinitive for formal obligation/arrangement"
               ]
             },
@@ -1398,7 +1398,7 @@
                 "Must, can't, may, might, could for present deduction",
                 "Must have, can't have, may/might/could have for past deduction",
                 "Should have / ought to have for unfulfilled expectation or criticism",
-                "Needn't have vs didn't need to; Will for assumptions about the present"
+                "Needn't have vs didn't need to; Will for assumptions about the present [🇬🇧→🇺🇸 BrE/AmE: Don't need to (regular verb form) is standard: 'Yo... → see discrepancies DB #BA-030]"
               ]
             },
             {
@@ -1445,7 +1445,7 @@
               "subcategory": "Mixed Conditionals",
               "points": [
                 "Mixed: past condition→present result (If I had studied, I would have a better job now)",
-                "Mixed: present condition→past result (If I were smarter, I would have solved it)",
+                "Mixed: present condition→past result (If I were smarter, I would have solved it) [🇬🇧→🇺🇸 BrE/AmE: Were-subjunctive preserved: 'If I were you...', 'I... → see discrepancies DB #BA-051]",
                 "Alternatives to if: unless, provided/providing (that), as long as, on condition that, supposing, in case",
                 "Even if; whether...or not; If it weren't for / If it hadn't been for; But for + noun"
               ]
@@ -1504,7 +1504,7 @@
               "subcategory": "Pronouns Extended",
               "points": [
                 "Reflexive pronouns: extended uses; Reciprocal pronouns: each other vs one another",
-                "Generic/impersonal pronouns: you, we, they, one",
+                "Generic/impersonal pronouns: you, we, they, one [🇬🇧→🇺🇸 BrE/AmE: One + his/her or they/their: 'One should do his be... → see discrepancies DB #BA-058]",
                 "Indefinite pronouns: whoever, whatever, whichever, however"
               ]
             },
@@ -1609,7 +1609,7 @@
               "subcategory": "Cleft Sentences",
               "points": [
                 "It-cleft: It + be + focused element + that/who (It was John who broke the window)",
-                "Wh-cleft: What + clause + be + focus (What I need is a holiday)",
+                "Wh-cleft: What + clause + be + focus (What I need is a holiday) [🇬🇧→🇺🇸 BrE/AmE: TAKE a vacation: 'Where are you going on vacation?... → see discrepancies DB #BA-047]",
                 "All-cleft: All I want is...; The reason why...; The thing that..."
               ]
             },
@@ -1632,15 +1632,15 @@
               "description": "Lower-frequency irregular verbs for academic and professional contexts. Source: Cambridge Grammar.",
               "points": [
                 "arise → arose → arisen",
-                "awake → awoke → awoken",
+                "awake → awoke → awoken [🇬🇧→🇺🇸 BrE/AmE: Both woke and waked accepted; waked especially in ... → see discrepancies DB #BA-021]",
                 "bear → bore → borne (born for birth)",
                 "beat → beat → beaten",
                 "bind → bound → bound",
                 "breed → bred → bred",
                 "cling → clung → clung",
-                "dive → dived/dove → dived (AmE: dove common as past)",
+                "dive → dived/dove → dived (AmE: dove common as past) [🇬🇧→🇺🇸 BrE/AmE: Dove is the common past simple (dived also accepte... → see discrepancies DB #BA-014]",
                 "dwell → dwelt/dwelled → dwelt/dwelled",
-                "fit → fit/fitted → fit/fitted (AmE: fit; BrE: fitted for past)",
+                "fit → fit/fitted → fit/fitted (AmE: fit; BrE: fitted for past) [🇬🇧→🇺🇸 BrE/AmE: Fit is used as past tense: 'The shirt fit him.'... → see discrepancies DB #BA-015]",
                 "forecast → forecast → forecast",
                 "grind → ground → ground",
                 "leap → leaped/leapt → leaped/leapt",
@@ -1816,11 +1816,11 @@
               "points": [
                 "Will for habits/characteristic behavior; Would for typical past behavior",
                 "Will for assumptions about the present (That'll be John); Should for expectation",
-                "Should after suggesting/insisting verbs (I suggest that he should go)",
+                "Should after suggesting/insisting verbs (I suggest that he should go) [🇬🇧→🇺🇸 BrE/AmE: Present subjunctive REQUIRED: 'I suggest that he g... → see discrepancies DB #BA-048]",
                 "Shall in formal/legal contexts; Can for general possibility",
                 "May for concession (He may be rich but he's not happy); Might for reproach",
                 "Must for annoying obligation (Must you make so much noise?)",
-                "Need as modal in questions/negatives (Need I say more?); Dare as modal"
+                "Need as modal in questions/negatives (Need I say more?); Dare as modal [🇬🇧→🇺🇸 BrE/AmE: Dare is almost always a regular verb: 'I don't dar... → see discrepancies DB #BA-032]"
               ]
             },
             {
@@ -1830,7 +1830,7 @@
                 "Should/ought to have for unfulfilled expectation",
                 "Might/may have for reproach or annoyance",
                 "Could have for unrealized past ability/opportunity",
-                "Needn't have vs didn't need to: nuanced distinction"
+                "Needn't have vs didn't need to: nuanced distinction [🇬🇧→🇺🇸 BrE/AmE: Don't need to (regular verb form) is standard: 'Yo... → see discrepancies DB #BA-030]"
               ]
             }
           ]
@@ -1856,16 +1856,16 @@
             {
               "subcategory": "Present Subjunctive",
               "points": [
-                "Subjunctive after suggest/recommend/insist/demand (I suggest that he go)",
-                "Subjunctive after adjectives of necessity (It is essential that he be informed)",
+                "Subjunctive after suggest/recommend/insist/demand (I suggest that he go) [🇬🇧→🇺🇸 BrE/AmE: Present subjunctive REQUIRED: 'I suggest that he g... → see discrepancies DB #BA-048]",
+                "Subjunctive after adjectives of necessity (It is essential that he be informed) [🇬🇧→🇺🇸 BrE/AmE: Subjunctive is standard: 'It's vital that he atten... → see discrepancies DB #BA-049]",
                 "Fixed expressions (God save..., Be that as it may, Come what may, Suffice it to say, Long live)",
-                "Subjunctive vs should + infinitive (I suggest that he go / he should go)"
+                "Subjunctive vs should + infinitive (I suggest that he go / he should go) [🇬🇧→🇺🇸 BrE/AmE: Present subjunctive REQUIRED: 'I suggest that he g... → see discrepancies DB #BA-048]"
               ]
             },
             {
               "subcategory": "Were-Subjunctive",
               "points": [
-                "Were-subjunctive in conditionals (If I were you...)",
+                "Were-subjunctive in conditionals (If I were you...) [🇬🇧→🇺🇸 BrE/AmE: Were-subjunctive preserved: 'If I were you...', 'I... → see discrepancies DB #BA-051]",
                 "Were-subjunctive after wish (I wish I were taller)",
                 "Were-subjunctive after as if/as though; after suppose/supposing; after would rather"
               ]
@@ -1903,7 +1903,7 @@
               "points": [
                 "Causative in passive reporting: have/get something done in reporting structures (It is believed that he had his house renovated, She is said to have had her portrait painted)",
                 "Causative get + reflexive + past participle for actions you need done to yourself (I need to get myself checked by a doctor, He got himself elected president, They got themselves invited to the ceremony)",
-                "Causative have + object + present participle for ongoing actions by others (I'll have the assistant preparing the report while I'm away, She had the team working on the project all weekend)"
+                "Causative have + object + present participle for ongoing actions by others (I'll have the assistant preparing the report while I'm away, She had the team working on the project all weekend) [🇬🇧→🇺🇸 BrE/AmE: on the weekend: 'What are you doing on the weekend... → see discrepancies DB #BA-033]"
               ]
             }
           ]
@@ -1970,7 +1970,7 @@
             {
               "subcategory": "Pronouns",
               "points": [
-                "One/ones for substitution; Impersonal one; Generic you/we/they",
+                "One/ones for substitution; Impersonal one; Generic you/we/they [🇬🇧→🇺🇸 BrE/AmE: One + his/her or they/their: 'One should do his be... → see discrepancies DB #BA-058]",
                 "Those who / people who; Such as pronoun"
               ]
             }
@@ -2159,7 +2159,7 @@
                 "Wh-cleft (pseudo-cleft) sentences: What + clause + be + focus (What I need is more time, What bothers me is his attitude)",
                 "Phrase structure: Noun Phrase (NP) — determiner + pre-modifiers + head noun + post-modifiers (the three very old wooden chairs in the corner)",
                 "Phrase structure: Verb Phrase (VP) — auxiliary + main verb + complements (has been working, might have been taken)",
-                "Phrase structure: Adjective Phrase (AdjP) — intensifier + adjective + complement (very happy about the result, quite different from before)",
+                "Phrase structure: Adjective Phrase (AdjP) — intensifier + adjective + complement (very happy about the result, quite different from before) [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Phrase structure: Adverb Phrase (AdvP) — intensifier + adverb (very quickly, much more carefully)",
                 "Phrase structure: Prepositional Phrase (PP) — preposition + NP complement (in the garden, after the meeting, on top of the hill)",
                 "Post-modification in noun phrases: prepositional phrases (the man in the corner), relative clauses (the book that I read), participle clauses (the woman waiting outside)",
@@ -2190,7 +2190,7 @@
                 "Quotations: block quotations — long quotes (over 40 words/4 lines) are set off as block quotes without quotation marks",
                 "Colon (:): used to introduce a formal statement or lengthy quotation in academic writing (The author makes his position clear: 'We must act now or face the consequences.')",
                 "Semicolon (;): used in academic writing to create sophisticated sentence connections and to balance contrasting ideas",
-                "Capitalization: in titles following different style guides — APA, MLA, Chicago (sentence case vs title case conventions)",
+                "Capitalization: in titles following different style guides — APA, MLA, Chicago (sentence case vs title case conventions) [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Capitalization: after colons — lowercase when what follows is dependent on the preceding clause, capitalize when it's an independent clause or formal rule",
                 "Numbers: spell out numbers one through nine/one hundred, use numerals for 10+ (with style guide variations)",
                 "Slashes (/) in formal contexts: representing 'and' or 'or' should be avoided in formal academic writing; spell out instead",
@@ -2295,7 +2295,7 @@
                 "Concessive: Be that as it may, That said, Having said that, All the same, Even so, Mind you",
                 "Reformulation: In a nutshell, To put it bluntly, In so many words, That is to say",
                 "Attitudinal: To my mind, As I see it, For my part, If you ask me, Frankly speaking",
-                "Transitional: With this in mind, Against this background, In the light of, On a different note",
+                "Transitional: With this in mind, Against this background, In the light of, On a different note [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Qualifying: Insofar as, To the extent that, For all intents and purposes, To all appearances",
                 "Generalizing: By and large, On the whole, As a rule, For the most part"
               ]
@@ -2411,7 +2411,7 @@
                 "delve into — explore in detail",
                 "devolve upon — pass responsibility to",
                 "disabuse of — free from a misconception",
-                "divest of — take away from",
+                "divest of — take away from [🇬🇧→🇺🇸 BrE/AmE: Dove is the common past simple (dived also accepte... → see discrepancies DB #BA-014]",
                 "eke out — make limited resources last",
                 "emanate from — come from a source",
                 "endear to — make oneself liked",
@@ -2528,7 +2528,7 @@
               "points": [
                 "Stylistic punctuation: using fragments for rhetorical effect (No. Never. Not in a million years.)",
                 "Stylistic punctuation: dash vs parentheses vs commas — strategic choice based on degree of separation, emphasis, and formality",
-                "Stylistic punctuation: using semicolons for balanced, parallel structures in formal and literary writing (The past is a foreign country; they do things differently there.)",
+                "Stylistic punctuation: using semicolons for balanced, parallel structures in formal and literary writing (The past is a foreign country; they do things differently there.) [🇬🇧→🇺🇸 BrE/AmE: different FROM or THAN: 'This is different than wh... → see discrepancies DB #BA-035]",
                 "Stylistic punctuation: the colon for dramatic anticipation, introducing a punchline, or building suspense (The answer was simple: they had failed to prepare.)",
                 "Ellipsis for stylistic effect: creating suspense, indicating hesitation, trailing off, or suggesting unspoken content",
                 "Punctuation for tone and voice: exclamation marks for enthusiasm vs restraint, dashes for informality and conversational flow",

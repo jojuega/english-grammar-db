@@ -1,0 +1,1293 @@
+#!/usr/bin/env python3
+"""
+Build the BrE/AmE discrepancies database + annotate existing databases.
+Sources: British Council, Cambridge Grammar, Onestopenglish (Maxwell & Clandfield), Wikipedia, Azar-Hagen
+"""
+import json, sys, os
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+CEFR_PATH = os.path.join(DATA_DIR, 'english_grammar_cefr.json')
+AME_PATH = os.path.join(DATA_DIR, 'english_grammar_american.json')
+OUT_PATH = os.path.join(DATA_DIR, 'english_grammar_bre_ame_discrepancies.json')
+
+# ─── 1. BUILD THE THIRD DATABASE ──────────────────────────────────────────
+discrepancies = {
+    "name": "British vs American English — Grammatical Discrepancies",
+    "description": "Complete cross-reference of real grammatical differences between British English (BrE) and American English (AmE). "
+                   "Use this alongside the main grammar databases to identify and practice the divergences between the two varieties. "
+                   "Sources: Cambridge Grammar, British Council LearnEnglish, Onestopenglish (Maxwell & Clandfield), "
+                   "Wikipedia (AmE/BrE grammatical differences), Pearson GSE, Azar-Hagen Grammar Series.",
+    "meta": {
+        "version": "1.0",
+        "total_items": 0,
+        "sources": [
+            "Cambridge Dictionary — British and American Grammar",
+            "British Council LearnEnglish — B1-B2 British English and American English",
+            "Onestopenglish — Differences in American and British English Grammar (Maxwell & Clandfield)",
+            "Wikipedia — American and British English Grammatical Differences",
+            "Azar-Hagen Grammar Series",
+            "Pearson GSE Grammar Guide"
+        ]
+    },
+    "categories": []
+}
+
+def add_item(cat_name, item):
+    """Add an item to a category, creating the category if needed."""
+    for cat in discrepancies["categories"]:
+        if cat["name"] == cat_name:
+            cat["items"].append(item)
+            discrepancies["meta"]["total_items"] += 1
+            return
+    # Create new category
+    discrepancies["categories"].append({
+        "name": cat_name,
+        "description": "",
+        "items": [item]
+    })
+    discrepancies["meta"]["total_items"] += 1
+
+# ─── CATEGORY 1: VERB TENSES ──────────────────────────────────────────────
+
+add_item("Verb Tenses", {
+    "id": "BA-001",
+    "point": "Present perfect vs simple past with 'just', 'already', 'yet'",
+    "bre": "Present perfect REQUIRED with just, already, yet for recent past events with present relevance.",
+    "ame": "Simple past ACCEPTED (and common) with just, already, yet when the action is considered finished.",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: I've just eaten lunch. / Have you done it yet? / I've already seen that film.",
+        "AmE: I just ate lunch. / Did you do it yet? / I already saw that film."
+    ],
+    "key_difference": "This is the most frequent BrE/AmE grammar difference. AmE speakers use simple past ~3× more than BrE with these adverbs."
+})
+
+add_item("Verb Tenses", {
+    "id": "BA-002",
+    "point": "Present perfect for recent past with present result (without time markers)",
+    "bre": "Present perfect preferred: 'I've lost my key' (still can't find it).",
+    "ame": "Simple past accepted: 'I lost my key' (even if still missing).",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I've finished the report. Can you check it?",
+        "AmE: I finished the report. Can you check it?"
+    ],
+    "key_difference": "BrE distinguishes more clearly between past finished actions and present-relevant ones."
+})
+
+add_item("Verb Tenses", {
+    "id": "BA-003",
+    "point": "Past perfect usage frequency",
+    "bre": "Past perfect used less commonly; simple past preferred for sequencing when context is clear.",
+    "ame": "Past perfect used more frequently, especially to disambiguate sequence of past events.",
+    "cefr_level": "B2–C1",
+    "american_level": "L4–L5",
+    "example_pair": [
+        "BrE: We watched the news, then the documentary.",
+        "AmE: We had watched the Sunday night, then Monday we watched the other game."
+    ],
+    "key_difference": "Cambridge Grammar notes AmE uses past perfect more even when sequence is clear from context."
+})
+
+add_item("Verb Tenses", {
+    "id": "BA-004",
+    "point": "'Be going to' for giving street directions",
+    "bre": "Imperative or present simple used: 'Take this street, then go two hundred yards.'",
+    "ame": "Be going to common (informal gonna): 'You're gonna go three blocks, then you're gonna see...'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: Turn left at the traffic lights, then go straight on.",
+        "AmE: You're gonna turn left at the traffic lights, then you're gonna go straight."
+    ],
+    "key_difference": "Cambridge Grammar specifically highlights this difference in AmE spoken directions."
+})
+
+# ─── CATEGORY 2: VERB FORMS (MORPHOLOGY) ──────────────────────────────────
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-005",
+    "point": "Past participle of get: got vs gotten",
+    "bre": "Past participle is got: 'I've got a cold' (have/possess), 'He's got thin' (become).",
+    "ame": "Past participle is gotten when meaning 'obtained/become': 'I've gotten a cold', 'He's gotten thin'. HAVE + got is still used for possession/obligation (NOT have gotten).",
+    "cefr_level": "B1–B2",
+    "american_level": "L3–L4",
+    "example_pair": [
+        "BrE: I've got a new car. (I have) / He's got angry quickly. (become)",
+        "AmE: I've gotten a new car. (obtained) / He's gotten angry. (become) / I've got two sisters. (have — same as BrE)"
+    ],
+    "key_difference": "Gotten is the ORIGINAL English form that BrE lost but AmE preserved. Both use 'have got' for possession."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-006",
+    "point": "Past tense of burn: burnt vs burned",
+    "bre": "Both burnt and burned accepted; burnt is more common.",
+    "ame": "Burned is strongly preferred; burnt is rare.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: The toast burnt. / She burnt the papers.",
+        "AmE: The toast burned. / She burned the papers."
+    ],
+    "key_difference": "One of ~15 verbs where BrE accepts -t forms, AmE prefers -ed. See full list below."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-007",
+    "point": "Past tense of dream: dreamt vs dreamed",
+    "bre": "Both dreamt and dreamed accepted; dreamt is common.",
+    "ame": "Dreamed is strongly preferred; dreamt is very rare.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I dreamt about you last night.",
+        "AmE: I dreamed about you last night."
+    ],
+    "key_difference": "Same -t vs -ed pattern as burn, learn, etc."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-008",
+    "point": "Past tense of learn: learnt vs learned",
+    "bre": "Both learnt and learned accepted; learnt is common.",
+    "ame": "Learned is the ONLY standard form (learnt is rare/odd).",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: I learnt French at school.",
+        "AmE: I learned French in school."
+    ],
+    "key_difference": "This is the most noticeable -t vs -ed difference. Learned is also the spelling in both varieties when used as an adjective (a learned professor, /lɜːrnɪd/)."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-009",
+    "point": "Past tense of spell: spelt vs spelled",
+    "bre": "Both spelt and spelled accepted.",
+    "ame": "Spelled is the ONLY standard form.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: She spelt my name wrong.",
+        "AmE: She spelled my name wrong."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-010",
+    "point": "Past tense of spill: spilt vs spilled",
+    "bre": "Both spilt and spilled accepted.",
+    "ame": "Spilled is strongly preferred.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I spilt coffee on my shirt.",
+        "AmE: I spilled coffee on my shirt."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-011",
+    "point": "Past tense of spoil: spoilt vs spoiled",
+    "bre": "Both spoilt and spoiled accepted.",
+    "ame": "Spoiled is strongly preferred.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: The children were spoilt by their grandparents.",
+        "AmE: The children were spoiled by their grandparents."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-012",
+    "point": "Past tense of smell: smelt vs smelled",
+    "bre": "Both smelt and smelled accepted.",
+    "ame": "Smelled is the ONLY standard form.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: It smelt like roses.",
+        "AmE: It smelled like roses."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-013",
+    "point": "Past tense of lean: leant vs leaned",
+    "bre": "Both leant and leaned accepted.",
+    "ame": "Leaned is the ONLY standard form.",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: He leant against the wall.",
+        "AmE: He leaned against the wall."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-014",
+    "point": "Past tense of dive: dived vs dove",
+    "bre": "Dived is the ONLY standard form.",
+    "ame": "Dove is the common past simple (dived also accepted).",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: She dived into the pool.",
+        "AmE: She dove into the pool."
+    ],
+    "key_difference": "One of the few cases where AmE uses an irregular form and BrE uses a regular one."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-015",
+    "point": "Past tense of fit: fitted vs fit",
+    "bre": "Fitted is the standard past tense: 'The shirt fitted him.'",
+    "ame": "Fit is used as past tense: 'The shirt fit him.'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: The suit fitted perfectly.",
+        "AmE: The suit fit perfectly."
+    ],
+    "key_difference": "Cambridge Grammar specifically notes: BrE usually fitted, AmE usually fit."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-016",
+    "point": "Past participle of prove: proved vs proven",
+    "bre": "Proved is the standard past participle (proven used as adjective).",
+    "ame": "Both proved and proven accepted as past participle; proven is very common.",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: The theory has proved correct.",
+        "AmE: The theory has proven correct. / The theory has proved correct."
+    ],
+    "key_difference": "Proven is more established in AmE as a past participle. In BrE it's mainly an adjective (a proven fact)."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-017",
+    "point": "Past tense of bust: bust vs busted",
+    "bre": "Bust is the standard past form.",
+    "ame": "Busted is common as past tense.",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: He bust the lock.",
+        "AmE: He busted the lock."
+    ],
+    "key_difference": "Onestopenglish lists busted as distinctly AmE."
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-018",
+    "point": "Past participle of saw: sawn vs sawed",
+    "bre": "Sawn is the standard past participle: 'The wood was sawn in half.'",
+    "ame": "Sawed is common: 'The wood was sawed in half.'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: He has sawn through the log.",
+        "AmE: He has sawed through the log."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-019",
+    "point": "Past tense of plead: pleaded vs pled",
+    "bre": "Pleaded is standard; pled is rare/legal jargon.",
+    "ame": "Both pleaded and pled accepted; pled is common especially in legal contexts.",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: He pleaded guilty.",
+        "AmE: He pled guilty. / He pleaded guilty."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-020",
+    "point": "Past tense of stink: stank vs stunk",
+    "bre": "Stank is the standard past simple; stunk as past participle.",
+    "ame": "Both stank and stunk accepted as past simple.",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: The room stank of smoke.",
+        "AmE: The room stunk. / The room stank."
+    ]
+})
+
+add_item("Verb Forms (Morphology)", {
+    "id": "BA-021",
+    "point": "Past tense of wake: woke vs waked",
+    "bre": "Woke is the only standard past tense.",
+    "ame": "Both woke and waked accepted; waked especially in formal/nautical use.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I woke up at 7.",
+        "AmE: I woke up at 7. / I waked up early."
+    ]
+})
+
+# ─── CATEGORY 3: SUBJECT-VERB AGREEMENT ────────────────────────────────────
+
+add_item("Subject-Verb Agreement", {
+    "id": "BA-022",
+    "point": "Collective nouns: singular vs plural verb (team, committee, government, family, staff)",
+    "bre": "Both SINGULAR and PLURAL verbs accepted. Singular = unit; Plural = individuals. 'The team is playing well' / 'The team are arguing.'",
+    "ame": "SINGULAR verb REQUIRED with collective nouns. 'The team is playing well' / 'The team IS arguing' (NOT 'are').",
+    "cefr_level": "B1–B2",
+    "american_level": "L3–L4",
+    "example_pair": [
+        "BrE: My family is/are visiting from Pakistan. / The government have announced...",
+        "AmE: My family is visiting from Pakistan. / The government has announced..."
+    ],
+    "key_difference": "This is the most famous BrE/AmE grammar difference after present perfect. BrE uses 'notional agreement' (meaning-based); AmE uses 'formal agreement' (form-based). Exception in both: 'police' always takes plural."
+})
+
+add_item("Subject-Verb Agreement", {
+    "id": "BA-023",
+    "point": "Sports team names: singular vs plural verb",
+    "bre": "Singular verb if team name is singular: 'FC Red Bull Salzburg IS an Austrian club.'",
+    "ame": "Plural verb often used even with singular team names: 'The New York Red Bulls ARE an American team.'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: Arsenal is playing tomorrow. / Liverpool are winning.",
+        "AmE: The Lakers are playing tonight. / The Yankees are winning."
+    ],
+    "key_difference": "Wikipedia notes this is an area of systematic divergence. AmE treats team names as plural collectives regardless of form."
+})
+
+add_item("Subject-Verb Agreement", {
+    "id": "BA-024",
+    "point": "The United States: singular vs earlier plural agreement",
+    "bre": "Treated as singular (same as AmE): 'The United States has decided...'",
+    "ame": "STRICTLY singular after the Civil War: 'The United States is...'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: The United States has a large economy.",
+        "AmE: The United States is a democracy. (usage standardised to singular post-1865)"
+    ],
+    "key_difference": "Before the Civil War, 'The United States are...' was common. Now universally singular in both varieties."
+})
+
+# ─── CATEGORY 4: MODAL VERBS AND AUXILIARIES ──────────────────────────────
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-025",
+    "point": "Have got vs have for possession and relationships",
+    "bre": "Have got is VERY common in spoken BrE for possession/relationships: 'I've got two cousins in Ohio.'",
+    "ame": "Have (without got) is preferred: 'I have two cousins in Ohio.' ('I've got' is understood but less common.)",
+    "cefr_level": "A1–A2",
+    "american_level": "L1–L2",
+    "example_pair": [
+        "BrE: I've got a car. / Have you got any money? / She's got blue eyes.",
+        "AmE: I have a car. / Do you have any money? / She has blue eyes."
+    ],
+    "key_difference": "AmE: 'I have' is default. BrE: 'I've got' is default in speech. Cambridge Grammar calls this a key difference."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-026",
+    "point": "Have got to vs have to for obligation",
+    "bre": "Have got to is more common in spoken BrE for obligation.",
+    "ame": "Have to is preferred; have got to is less common.",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: I've got to take my mother back to hospital.",
+        "AmE: I have to be back in San Francisco next Sunday."
+    ],
+    "key_difference": "Cambridge Grammar: BrE uses have got to more; AmE prefers have to."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-027",
+    "point": "Have as auxiliary in questions: 'Have you...?' vs 'Do you have...?'",
+    "bre": "Auxiliary have in questions is common: 'Have you any money?', 'Have you a moment?'",
+    "ame": "Do-support required: 'Do you have any money?', 'Do you have a moment?'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: Have you a pen? / I haven't a clue.",
+        "AmE: Do you have a pen? / I don't have a clue."
+    ],
+    "key_difference": "AmE treats have as a main verb requiring do-support. BrE can use it as an auxiliary (like have got)."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-028",
+    "point": "Shall for first-person future",
+    "bre": "Shall is traditionally used with I/we for future (formal): 'I shall return.' Still used in formal/educated speech.",
+    "ame": "Will is used for all persons. Shall is very rare outside legal/quotations. 'I will return.'",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: I shall be back in a minute. / We shall overcome.",
+        "AmE: I'll call you tomorrow. / We will overcome."
+    ],
+    "key_difference": "Shall is dying even in BrE but still exists in formal contexts. Almost extinct in AmE."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-029",
+    "point": "Shall I/we for offers and suggestions vs Can/Should/How about",
+    "bre": "Common use of 'Shall I...?' for offers and 'Shall we...?' for suggestions.",
+    "ame": "Alternatives used: 'Should/Can I...?' for offers; 'Do you want to...?' or 'How about...' for suggestions.",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: Shall I open the window? / Shall we meet at 5?",
+        "AmE: Should I open the window? / Do you want to meet at 5?"
+    ],
+    "key_difference": "British Council lists this as one of the 5 key grammatical differences. AmE speakers rarely use shall for offers/suggestions."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-030",
+    "point": "Needn't vs don't need to for lack of necessity",
+    "bre": "Needn't (modal form) is common especially in BrE: 'You needn't come if you're busy.'",
+    "ame": "Don't need to (regular verb form) is standard: 'You don't need to come if you're busy.' Needn't is very unusual in AmE.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: You needn't wait. / Need I say more?",
+        "AmE: You don't need to wait. / Do I need to say more?"
+    ],
+    "key_difference": "Onestopenglish: 'Needn't is very unusual in AmE and the usual form is don't need to.'"
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-031",
+    "point": "Do as verb substitute after modals",
+    "bre": "Do is added after modals in short answers: '—Will you come? —I might do.' '—Should I go? —You should do.'",
+    "ame": "Modal used alone without do: '—Will you come? —I might.' '—Should I go? —You should.'",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I might do, but I doubt it.",
+        "AmE: Oh, I might."
+    ],
+    "key_difference": "Cambridge Grammar: BrE adds do after modals; AmE uses modal alone."
+})
+
+add_item("Modal Verbs and Auxiliaries", {
+    "id": "BA-032",
+    "point": "Dare: modal vs regular verb usage",
+    "bre": "Dare can be used as a modal (no -s, no do-support): 'I daren't ask.', 'Dare he go?'",
+    "ame": "Dare is almost always a regular verb: 'I don't dare to ask.' 'Does he dare to go?'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: I daren't tell him. / How dare you! / Dare she go?",
+        "AmE: I don't dare (to) tell him. / How dare you! (fixed expression) / Does she dare to go?"
+    ],
+    "key_difference": "Modal dare is mainly BrE. In AmE, 'How dare you!' is a fixed expression; all other uses are regular."
+})
+
+# ─── CATEGORY 5: PREPOSITIONS ─────────────────────────────────────────────
+
+add_item("Prepositions", {
+    "id": "BA-033",
+    "point": "Preposition with weekend: at vs on",
+    "bre": "at the weekend: 'What are you doing at the weekend?'",
+    "ame": "on the weekend: 'What are you doing on the weekend?'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: We'll go to the beach at the weekend.",
+        "AmE: We'll go to the beach on the weekend."
+    ],
+    "key_difference": "This is one of the most common preposition differences. Cambridge Grammar explicitly contrasts these."
+})
+
+add_item("Prepositions", {
+    "id": "BA-034",
+    "point": "Preposition with streets: in vs on",
+    "bre": "in + street: 'She lives in Oxford Street.'",
+    "ame": "on + street: 'She lives on Main Street.'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: The shop is in High Street.",
+        "AmE: The store is on Main Street."
+    ],
+    "key_difference": "Cambridge Grammar: BrE in, AmE on for street names."
+})
+
+add_item("Prepositions", {
+    "id": "BA-035",
+    "point": "Different to/from vs different from/than",
+    "bre": "different TO or FROM: 'This is different to what I expected.' / 'Different from' is also standard.",
+    "ame": "different FROM or THAN: 'This is different than what I expected.' / 'Different from' is standard in formal writing.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: This is different to the original.",
+        "AmE: This is different than the original."
+    ],
+    "key_difference": "Both varieties accept 'different from'. 'Different to' is distinctly BrE. 'Different than' is distinctly AmE."
+})
+
+add_item("Prepositions", {
+    "id": "BA-036",
+    "point": "Write to someone vs write someone (omission of to)",
+    "bre": "to is required: 'I'll write to you tomorrow.'",
+    "ame": "to can be omitted: 'I'll write you tomorrow.' (write + direct object)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I wrote to her last week.",
+        "AmE: I wrote her last week."
+    ],
+    "key_difference": "Onestopenglish: AmE can omit to; BrE requires it."
+})
+
+add_item("Prepositions", {
+    "id": "BA-037",
+    "point": "Monday to Friday vs Monday through Friday",
+    "bre": "to/till for time ranges: 'Monday to Friday', '9 to 5'.",
+    "ame": "through for inclusive ranges: 'Monday through Friday', '9 to 5' also used.",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: The shop is open Monday to Friday.",
+        "AmE: The store is open Monday through Friday."
+    ],
+    "key_difference": "Through is distinctly AmE for inclusive ranges. Cambridge Grammar notes this."
+})
+
+add_item("Prepositions", {
+    "id": "BA-038",
+    "point": "For vs in with negative time expressions (haven't done X in/for Y years)",
+    "bre": "for is standard: 'I haven't seen him for years.'",
+    "ame": "in is common: 'I haven't seen him in years.' (Both for and in used.)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I haven't had a holiday for three years.",
+        "AmE: I haven't had a holiday in three years."
+    ],
+    "key_difference": "Cambridge Grammar: AmE uses in where BrE uses for in negative time expressions."
+})
+
+add_item("Prepositions", {
+    "id": "BA-039",
+    "point": "At university/in school vs in university/at school",
+    "bre": "at university: 'She's studying at university.'",
+    "ame": "in university OR in college: 'She's studying in college.' (Also 'at college'.)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: He's at university studying law.",
+        "AmE: He's in college studying law."
+    ],
+    "key_difference": "Onestopenglish: BrE 'at university'; AmE 'in university/college'. Also 'go to university' vs 'go to college'."
+})
+
+add_item("Prepositions", {
+    "id": "BA-040",
+    "point": "Cater for vs cater to",
+    "bre": "cater FOR: 'The hotel caters for all dietary requirements.'",
+    "ame": "cater TO: 'The hotel caters to all dietary needs.'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: This school caters for children with special needs.",
+        "AmE: This school caters to children with special needs."
+    ]
+})
+
+add_item("Prepositions", {
+    "id": "BA-041",
+    "point": "Protest vs protest against",
+    "bre": "protest AGAINST: 'Thousands protested against the decision.'",
+    "ame": "protest (transitive, no against): 'Thousands protested the decision.'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: Workers protested against low wages.",
+        "AmE: Workers protested low wages."
+    ],
+    "key_difference": "AmE treats protest as a transitive verb; BrE requires a preposition."
+})
+
+add_item("Prepositions", {
+    "id": "BA-042",
+    "point": "Meet vs meet with",
+    "bre": "meet (transitive) for people: 'I'll meet you at the station.' (Also 'meet with' but less common.)",
+    "ame": "meet WITH for arranged meetings: 'I'll meet with the client tomorrow.' (meet = first time encounter.)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I'm meeting the manager at 3.",
+        "AmE: I'm meeting with the manager at 3."
+    ],
+    "key_difference": "In AmE, 'meet with' = scheduled meeting; 'meet' = first encounter. In BrE, 'meet' covers both."
+})
+
+# ─── CATEGORY 6: ARTICLES ────────────────────────────────────────────────
+
+add_item("Articles", {
+    "id": "BA-043",
+    "point": "Definite article with hospitals and institutions: in hospital vs in the hospital",
+    "bre": "NO article for institutional meaning: 'He's in hospital' (as patient), 'She's at university' (as student). Article used for building: 'The hospital is on Main Street.'",
+    "ame": "THE required: 'He's in THE hospital' (patient), 'She's at THE university' (student). Abstract use without article is limited to school, church, prison, college.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: She's in hospital recovering from surgery.",
+        "AmE: She's in the hospital recovering from surgery."
+    ],
+    "key_difference": "BrE omits the article for institutions when referring to their primary function (hospital→treatment, university→study). AmE includes the."
+})
+
+add_item("Articles", {
+    "id": "BA-044",
+    "point": "Go to hospital vs go to the hospital",
+    "bre": "go to hospital (no article): 'He went to hospital for an operation.'",
+    "ame": "go to THE hospital: 'He went to the hospital for surgery.'",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I had to go to hospital last night.",
+        "AmE: I had to go to the hospital last night."
+    ],
+    "key_difference": "Same pattern as BA-043. BrE treats these as 'bare institutional nouns'."
+})
+
+add_item("Articles", {
+    "id": "BA-045",
+    "point": "At (the) front/back: article with positions",
+    "bre": "In cars: 'at the front' / 'at the back'. Also 'in the front'/'in the back'.",
+    "ame": "In cars: 'in the front' / 'in the back'. 'I sat in the back of the car.'",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: The driver sits at the front of the car.",
+        "AmE: The driver sits in the front of the car."
+    ],
+    "key_difference": "BrE uses at for vehicle positions; AmE uses in."
+})
+
+# ─── CATEGORY 7: DELEXICAL VERBS (HAVE/TAKE) ──────────────────────────────
+
+add_item("Delexical Verbs (have/take)", {
+    "id": "BA-046",
+    "point": "Have a bath/shower/wash/rest/break vs take a bath/shower/wash/rest/break",
+    "bre": "HAVE is the default delexical verb: 'I'm going to have a shower.', 'Let's have a break.' (Take also used but less common.)",
+    "ame": "TAKE is the default: 'I'm going to take a shower.', 'Let's take a break.' (Have in this context is not used.)",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: I always have a shower in the morning. / Let's have a rest.",
+        "AmE: I always take a shower in the morning. / Let's take a rest."
+    ],
+    "key_difference": "British Council: AmE only uses take. BrE uses have primarily but take is also understood. This is one of the 5 key BrE/AmE differences."
+})
+
+add_item("Delexical Verbs (have/take)", {
+    "id": "BA-047",
+    "point": "Have a holiday vs take a vacation",
+    "bre": "HAVE a holiday: 'Where are you going for your holiday?'",
+    "ame": "TAKE a vacation: 'Where are you going on vacation?'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: We're having a holiday in Spain.",
+        "AmE: We're taking a vacation to Spain."
+    ],
+    "key_difference": "Both vocabulary (holiday vs vacation) and verb choice (have vs take) differ."
+})
+
+# ─── CATEGORY 8: SUBJUNCTIVE ──────────────────────────────────────────────
+
+add_item("Subjunctive and Hypotheticals", {
+    "id": "BA-048",
+    "point": "Mandative subjunctive after suggest/recommend/insist/demand",
+    "bre": "Should + infinitive OR indicative preferred: 'I suggest that he should go.' / 'I demanded that he was present.' (Subjunctive also used but less common, increasing due to AmE influence.)",
+    "ame": "Present subjunctive REQUIRED: 'I suggest that he go.' / 'I demanded that he BE present.' (Subjunctive strongly maintained.)",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: It is essential that everyone should be informed. / The doctor recommended that he takes more exercise.",
+        "AmE: It is essential that everyone be informed. / The doctor recommended that he take more exercise."
+    ],
+    "key_difference": "Academic research shows AmE is leading a 'subjunctive revival'. BrE has traditionally preferred should-periphrasis or indicative. This difference is narrowing due to AmE influence."
+})
+
+add_item("Subjunctive and Hypotheticals", {
+    "id": "BA-049",
+    "point": "Mandative subjunctive after 'importance' adjectives (essential, vital, necessary)",
+    "bre": "Should is preferred: 'It's vital that he should attend.'",
+    "ame": "Subjunctive is standard: 'It's vital that he attend.'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: It's important that everyone should understand.",
+        "AmE: It's important that everyone understand."
+    ]
+})
+
+add_item("Subjunctive and Hypotheticals", {
+    "id": "BA-050",
+    "point": "Subjunctive with request/demand nouns: 'a suggestion that...'",
+    "bre": "Should preferred: 'The suggestion that he should resign was rejected.'",
+    "ame": "Subjunctive: 'The suggestion that he resign was rejected.'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: Our recommendation that the project should be funded was approved.",
+        "AmE: Our recommendation that the project be funded was approved."
+    ]
+})
+
+add_item("Subjunctive and Hypotheticals", {
+    "id": "BA-051",
+    "point": "Were-subjunctive in fixed phrases and conditionals",
+    "bre": "Used similarly to AmE: 'If I were you...', 'I wish I were...'. However, 'I wish I was...' is also very common in informal BrE.",
+    "ame": "Were-subjunctive preserved: 'If I were you...', 'I wish I were...'. 'Was' in these contexts is considered non-standard.",
+    "cefr_level": "B1–B2",
+    "american_level": "L3–L4",
+    "example_pair": [
+        "BrE: If I were/was you, I'd accept. / I wish I was/were taller.",
+        "AmE: If I were you, I'd accept. / I wish I were taller."
+    ],
+    "key_difference": "AmE is stricter about were-subjunctive. BrE accepts was increasingly in informal contexts."
+})
+
+# ─── CATEGORY 9: ADVERBS AND ADJECTIVES ────────────────────────────────────
+
+add_item("Adverbs and Adjectives", {
+    "id": "BA-052",
+    "point": "Real vs really as adverb",
+    "bre": "Really is the ONLY standard adverb: 'That's really funny.' (Real as adverb is non-standard.)",
+    "ame": "Real is used informally as an adverb: 'That's real funny.' (Really is standard in formal contexts.)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: That's really good. / She's really nice.",
+        "AmE: That's real good. / She's real nice."
+    ],
+    "key_difference": "Cambridge Grammar: AmE informal uses real as adverb; this is non-standard in BrE."
+})
+
+add_item("Adverbs and Adjectives", {
+    "id": "BA-053",
+    "point": "Good vs well after copular verbs (I'm good vs I'm well)",
+    "bre": "I'm well/fine (standard). I'm good is used but originally an Americanism now spreading.",
+    "ame": "I'm good is the STANDARD response: 'How are you? —I'm good.'",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: 'How are you?' — 'I'm well, thanks.'",
+        "AmE: 'How are you?' — 'I'm good.'"
+    ],
+    "key_difference": "Cambridge Grammar: I'm good is distinctly AmE, though spreading in BrE. 'It worked out real good' has both adverbs (real + good) and is distinctly AmE."
+})
+
+add_item("Adverbs and Adjectives", {
+    "id": "BA-054",
+    "point": "Likely as adverb vs adjective",
+    "bre": "Likely is normally an ADJECTIVE: 'There are likely to be other announcements.' NOT used as adverb: *'likely will'.",
+    "ame": "Likely can be used as ADVERB (=probably): 'There will likely be other announcements.', 'The focus will likely continue.'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: It is likely to rain later. (adjective)",
+        "AmE: It will likely rain later. (adverb)"
+    ],
+    "key_difference": "Cambridge Grammar: AmE uses likely as a sentence adverb (like probably). BrE restricts it to adjective use."
+})
+
+add_item("Adverbs and Adjectives", {
+    "id": "BA-055",
+    "point": "Adverb position with yet in questions",
+    "bre": "Yet at END position: 'Have you finished yet?'",
+    "ame": "Yet can appear in MID position: 'Have you yet finished?' (formal) or simple past + end yet: 'Did you finish yet?'",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: Have you seen the film yet?",
+        "AmE: Did you see the film yet?"
+    ],
+    "key_difference": "Related to BA-001 (present perfect vs past simple). The word order difference is driven by tense choice."
+})
+
+# ─── CATEGORY 10: QUESTION TAGS ────────────────────────────────────────────
+
+add_item("Question Tags", {
+    "id": "BA-056",
+    "point": "Frequency and variety of question tags",
+    "bre": "Question tags are VERY FREQUENT with a wide variety: 'isn't it?', 'aren't they?', 'won't you?', 'shall we?', 'will you?', 'can you?', 'would you?'.",
+    "ame": "Question tags are LESS FREQUENT. Alternatives like 'right?', 'huh?', 'okay?', 'don't you think?' are more common in informal speech.",
+    "cefr_level": "B1–B2",
+    "american_level": "L3–L4",
+    "example_pair": [
+        "BrE: Open the door, will you? / You're coming, aren't you? / Let's go, shall we?",
+        "AmE: Open the door, okay? / You're coming, right? / Let's go, huh?"
+    ],
+    "key_difference": "Research (Tottie & Hoffmann) shows AmE uses more 'facilitating' tags (right? okay?), while BrE uses more canonical tags. But the overall tag rate is still similar."
+})
+
+add_item("Question Tags", {
+    "id": "BA-057",
+    "point": "Same-form tags with rising intonation (expressive tags)",
+    "bre": "Pattern: Auxiliary ± n't + subject pronoun. Rising intonation shows surprise but less common than in AmE.",
+    "ame": "Same-form tag (affirmative + affirmative) with rising intonation to show surprise: 'Oh, you did↗?' 'You are↗?'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: Oh, did you? (standard question tag)",
+        "AmE: Oh, you did↗? (same-form tag with rising intonation)"
+    ],
+    "key_difference": "Cambridge Grammar: AmE uses same-form tags with rising intonation to show surprise; BrE uses standard question tags."
+})
+
+# ─── CATEGORY 11: PRONOUNS ────────────────────────────────────────────────
+
+add_item("Pronouns and Determiners", {
+    "id": "BA-058",
+    "point": "One/one's vs his/her for impersonal reference",
+    "bre": "One + one's is maintained: 'One should do one's best.'",
+    "ame": "One + his/her or they/their: 'One should do his best.' Or using 'you/your': 'You should do your best.'",
+    "cefr_level": "C1",
+    "american_level": "L5",
+    "example_pair": [
+        "BrE: One must always keep one's promises.",
+        "AmE: One must always keep his promises. / You should always keep your promises."
+    ],
+    "key_difference": "BrE preserves the reflexive one → one's pattern better. AmE finds it awkward and substitutes his/their/your."
+})
+
+# ─── CATEGORY 12: SPELLING-BASED GRAMMAR ──────────────────────────────────
+
+add_item("Spelling-Based Grammar Differences", {
+    "id": "BA-059",
+    "point": "-ise vs -ize verb endings (organise/organize)",
+    "bre": "Both accepted: organise (traditional) and organize (Oxford spelling). Newspapers prefer -ise; academic prefers -ize.",
+    "ame": "ONLY -ize: organize, realize, recognize, apologize. -ise is a spelling error.",
+    "cefr_level": "B1–B2",
+    "american_level": "L3–L4",
+    "example_pair": [
+        "BrE: The company is organised/organized.",
+        "AmE: The company is organized."
+    ],
+    "key_difference": "Note: -ize forms originated in English (Greek -izo) and are NOT an American invention. Both are correct in BrE; only -ize in AmE."
+})
+
+add_item("Spelling-Based Grammar Differences", {
+    "id": "BA-060",
+    "point": "-our vs -or noun endings (colour/color, favour/favor)",
+    "bre": "-our: colour, favour, honour, behaviour, neighbour.",
+    "ame": "-or: color, favor, honor, behavior, neighbor.",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: What colour is your favourite?",
+        "AmE: What color is your favorite?"
+    ],
+    "key_difference": "Spelling-only difference but affects written grammar in terms of adjective/participle forms (colourful/colorful)."
+})
+
+add_item("Spelling-Based Grammar Differences", {
+    "id": "BA-061",
+    "point": "-re vs -er endings (centre/center, theatre/theater)",
+    "bre": "-re: centre, theatre, metre, litre, fibre.",
+    "ame": "-er: center, theater, meter, liter, fiber.",
+    "cefr_level": "A2–B1",
+    "american_level": "L2–L3",
+    "example_pair": [
+        "BrE: The theatre is in the city centre.",
+        "AmE: The theater is in the city center."
+    ],
+    "key_difference": "Spelling difference. Note: 'meter' in BrE is a measuring device; 'metre' is the unit of length."
+})
+
+add_item("Spelling-Based Grammar Differences", {
+    "id": "BA-062",
+    "point": "-l- vs -ll- in past forms (traveled/travelled, canceled/cancelled)",
+    "bre": "DOUBLE -ll- before -ed/-ing/-er: travelled, travelling, traveller, cancelled, labelling.",
+    "ame": "SINGLE -l-: traveled, traveling, traveler, canceled, labeling. (Exception: accent falls on second syllable → AmE also doubles: 'compelled', 'excelled'.)",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: I travelled to London. / The flight was cancelled.",
+        "AmE: I traveled to London. / The flight was canceled."
+    ],
+    "key_difference": "This is a systematic spelling difference that affects verb conjugation in written grammar."
+})
+
+add_item("Spelling-Based Grammar Differences", {
+    "id": "BA-063",
+    "point": "Past tense with -ed vs -t (complete verb list: burn, dream, learn, spell, spill, spoil, smell, leap, lean)",
+    "bre": "Both -ed and -t forms accepted for ALL of these verbs; -t forms are common.",
+    "ame": "-ed forms are the STANDARD for ALL of these verbs; -t forms are rare or archaic.",
+    "cefr_level": "B1",
+    "american_level": "L3",
+    "example_pair": [
+        "BrE: He dreamt of flying. / She learnt Spanish. / It smelt strange.",
+        "AmE: He dreamed of flying. / She learned Spanish. / It smelled strange."
+    ],
+    "key_difference": "This group of ~15 verbs systematically differs. The -t forms are historically older; AmE regularised them."
+})
+
+# ─── CATEGORY 13: NEGATION ────────────────────────────────────────────────
+
+add_item("Negation Patterns", {
+    "id": "BA-064",
+    "point": "Haven't (got) any vs don't have any — negation of possession",
+    "bre": "I haven't any. / I haven't got any. (both common; the latter more common in speech)",
+    "ame": "I don't have any. (I haven't got any is understood but sounds British.)",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: I haven't any money. / I haven't got any money.",
+        "AmE: I don't have any money."
+    ]
+})
+
+# ─── CATEGORY 14: CLAUSE STRUCTURE ─────────────────────────────────────────
+
+add_item("Clause Structure and Verb Complementation", {
+    "id": "BA-065",
+    "point": "Get + object + to-infinitive vs get + object + past participle",
+    "bre": "Get sb to do: 'I'll get him to call you back.' / Get sth done: 'I'll get it fixed.'",
+    "ame": "Same patterns, but 'get + object + past participle' is MORE COMMON in AmE: 'I got my car repaired.' (Both varieties use have/get causative.)",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: I'll get him to fix my car.",
+        "AmE: I'll get my car fixed."
+    ],
+    "key_difference": "Minor frequency difference in causative patterns. Both varieties use both forms."
+})
+
+add_item("Clause Structure and Verb Complementation", {
+    "id": "BA-066",
+    "point": "Preposition stranding vs pied-piping in relative clauses",
+    "bre": "Pied-piping (preposition before relative pronoun) is more common in formal BrE: 'The man to whom I spoke...'",
+    "ame": "Preposition stranding is more accepted: 'The man who I spoke to...' Both use stranding in speech, but AmE accepts it more freely in writing.",
+    "cefr_level": "B2–C1",
+    "american_level": "L4–L5",
+    "example_pair": [
+        "BrE (formal): The person with whom you spoke. (informal: The person you spoke to.)",
+        "AmE: The person you spoke to. (formal also: The person with whom you spoke.)"
+    ],
+    "key_difference": "Subtle register difference. BrE maintains pied-piping in formal contexts more strictly. Both use stranding informally."
+})
+
+# ─── CATEGORY 15: COMPOUND/COMPLEX DIFFERENCES ────────────────────────────
+
+add_item("Pragmatic and Discourse Features", {
+    "id": "BA-067",
+    "point": "'There you go' vs 'There you are' for handing something",
+    "bre": "Both used: 'There you are' and 'There you go' when giving something to someone.",
+    "ame": "'There you go' is the default. 'There you are' is less common.",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: 'Here's your coffee. There you are.'",
+        "AmE: 'Here's your coffee. There you go.'"
+    ]
+})
+
+add_item("Pragmatic and Discourse Features", {
+    "id": "BA-068",
+    "point": "Use of 'lovely' as all-purpose positive adjective",
+    "bre": "Lovely is used very frequently and broadly: 'lovely weather', 'That's lovely!', 'Have a lovely day!'",
+    "ame": "Lovely is less common; 'nice', 'great', 'beautiful' are preferred.",
+    "cefr_level": "A2",
+    "american_level": "L2",
+    "example_pair": [
+        "BrE: We had a lovely time. / What a lovely idea!",
+        "AmE: We had a great time. / What a nice idea!"
+    ],
+    "key_difference": "More of a pragmatic/discourse difference. The overuse of 'lovely' is a known BrE marker."
+})
+
+add_item("Pragmatic and Discourse Features", {
+    "id": "BA-069",
+    "point": "Past tense for politeness/distancing (I was wondering, I thought)",
+    "bre": "Very common for politeness: 'I was wondering if you could help.' 'I thought I might ask.' (Unreal past for distancing.)",
+    "ame": "Also used but slightly less frequent. Simple present more common: 'I wonder if you can help.'",
+    "cefr_level": "B2",
+    "american_level": "L4",
+    "example_pair": [
+        "BrE: I was wondering if you could spare a moment.",
+        "AmE: I wonder if you can help me for a minute."
+    ],
+    "key_difference": "Subtle frequency difference. BrE uses more complex distancing patterns."
+})
+
+
+# ─── 2. ANNOTATE EXISTING DATABASES ────────────────────────────────────────
+# Map discrepancies to existing CEFR points that need annotation
+
+annotation_map = {
+    # (discrepancy_id, search_substring_in_point)
+    "CEFR": [
+        # Verb Tenses
+        ("BA-001", "present perfect with just, already, yet"),
+        ("BA-001", "present perfect: form have/has + past participle"),  # will annotate the subcategory
+        ("BA-001", "present perfect: use with just"),  # if it exists
+        ("BA-002", "present perfect for life experiences"),
+        ("BA-003", "Past perfect with already, just, never"),
+        ("BA-003", "past perfect for actions before another"),
+        ("BA-004", "going to for plans"),
+
+        # Verb Forms
+        ("BA-005", "got/gotten"),
+        ("BA-006", "burn"),
+        ("BA-008", "learn"),
+        ("BA-014", "dive"),
+        ("BA-015", "fit"),
+        ("BA-021", "wake"),
+
+        # Subject-Verb Agreement
+        ("BA-022", "collective nouns"),
+        ("BA-023", "sports team"),
+
+        # Modals
+        ("BA-025", "have got"),
+        ("BA-026", "have got to"),
+        ("BA-027", "have got: questions"),
+        ("BA-028", "shall for future"),
+        ("BA-029", "shall for suggestions"),
+        ("BA-030", "needn't"),
+        ("BA-031", "auxiliary do"),
+        ("BA-032", "dare"),
+
+        # Prepositions
+        ("BA-033", "weekend"),
+        ("BA-034", "street"),
+        ("BA-035", "different"),
+        ("BA-036", "write to"),
+        ("BA-037", "to/till"),
+        ("BA-038", "in years"),
+        ("BA-039", "at university"),
+        ("BA-040", "cater"),
+        ("BA-041", "protest"),
+        ("BA-042", "meet with"),
+
+        # Articles
+        ("BA-043", "hospital"),
+        ("BA-044", "go to hospital"),
+        ("BA-045", "front/back"),
+
+        # Delexical verbs
+        ("BA-046", "have a bath"),
+        ("BA-046", "have a shower"),
+        ("BA-047", "holiday"),
+
+        # Subjunctive
+        ("BA-048", "subjunctive after suggest"),
+        ("BA-048", "suggest that he"),
+        ("BA-049", "essential that he"),
+        ("BA-051", "if I were"),
+
+        # Adverbs
+        ("BA-052", "real vs really"),
+        ("BA-053", "I'm good"),
+        ("BA-054", "likely as adverb"),
+        ("BA-055", "yet in questions"),
+
+        # Question tags
+        ("BA-056", "question tags"),
+        ("BA-057", "same-form tags"),
+
+        # Pronouns
+        ("BA-058", "impersonal one"),
+        ("BA-058", "one/one's"),
+        ("BA-058", "generic/impersonal"),
+
+        # Negation
+        ("BA-064", "haven't got"),
+        ("BA-064", "haven't any"),
+    ],
+    "AMERICAN": [
+        # Same mapping for American (different level designations)
+        ("BA-001", "present perfect with just, already, yet"),
+        ("BA-001", "present perfect: form have/has"),
+        ("BA-002", "present perfect for life experiences"),
+        ("BA-003", "past perfect with already"),
+        ("BA-003", "past perfect for actions before another"),
+        ("BA-004", "going to for plans"),
+
+        # Verb Forms
+        ("BA-005", "got/gotten"),
+        ("BA-005", "past participle of get"),
+        ("BA-006", "burn"),
+        ("BA-008", "learn"),
+        ("BA-014", "dive"),
+        ("BA-015", "fit"),
+        ("BA-021", "wake"),
+
+        # Subject-Verb Agreement
+        ("BA-022", "collective nouns"),
+        ("BA-023", "sports team"),
+
+        # Modals
+        ("BA-025", "have got"),
+        ("BA-026", "have got to"),
+        ("BA-027", "have got: questions"),
+        ("BA-028", "shall for future"),
+        ("BA-029", "shall for suggestions"),
+        ("BA-030", "needn't"),
+        ("BA-031", "auxiliary do"),
+        ("BA-032", "dare"),
+
+        # Prepositions
+        ("BA-033", "weekend"),
+        ("BA-034", "street"),
+        ("BA-035", "different"),
+        ("BA-036", "write to"),
+        ("BA-037", "to/till"),
+        ("BA-038", "in years"),
+        ("BA-039", "at university"),
+        ("BA-040", "cater"),
+        ("BA-041", "protest"),
+        ("BA-042", "meet with"),
+
+        # Articles
+        ("BA-043", "hospital"),
+        ("BA-044", "go to hospital"),
+        ("BA-045", "front/back"),
+
+        # Delexical verbs
+        ("BA-046", "have a bath"),
+        ("BA-046", "have a shower"),
+        ("BA-047", "holiday"),
+
+        # Subjunctive
+        ("BA-048", "subjunctive after suggest"),
+        ("BA-049", "essential that"),
+        ("BA-051", "if I were"),
+
+        # Adverbs
+        ("BA-052", "real vs really"),
+        ("BA-053", "I'm good"),
+        ("BA-054", "likely as adverb"),
+        ("BA-055", "yet in questions"),
+
+        # Question tags
+        ("BA-056", "question tags"),
+        ("BA-057", "same-form tags"),
+
+        # Pronouns
+        ("BA-058", "impersonal one"),
+        ("BA-058", "one/one's"),
+        ("BA-058", "generic/impersonal"),
+
+        # Negation
+        ("BA-064", "haven't got"),
+        ("BA-064", "haven't any"),
+    ]
+}
+
+# Get note text for a discrepancy
+def get_note_for_bre_ame(ba_id, is_cefr_db=True):
+    """Get annotation note for a specific discrepancy."""
+    for cat in discrepancies["categories"]:
+        for item in cat["items"]:
+            if item["id"] == ba_id:
+                if is_cefr_db:
+                    return f" [🇬🇧→🇺🇸 BrE/AmE: {item['ame'][:50]}... → see discrepancies DB #{ba_id}]"
+                else:
+                    return f" [🇺🇸→🇬🇧 BrE/AmE: {item['bre'][:50]}... → see discrepancies DB #{ba_id}]"
+    return None
+
+def find_and_annotate(db, annotations, db_name="CEFR"):
+    """Find matching points in the database and add annotations."""
+    annotated = 0
+    missed = []
+    
+    for ba_id, search_term in annotations:
+        found_any = False
+        for lvl_key, lvl in db["levels"].items():
+            for cat in lvl.get("categories", []):
+                for sub in cat.get("subs", []):
+                    for i, point in enumerate(sub.get("points", [])):
+                        if isinstance(point, str) and search_term.lower() in point.lower():
+                            # Check if already annotated
+                            if f"BA-" in point or f"discrepancies DB" in point.lower():
+                                continue
+                            note = get_note_for_bre_ame(ba_id, db_name == "CEFR")
+                            if note:
+                                sub["points"][i] = point + note
+                                annotated += 1
+                                found_any = True
+        
+        if not found_any:
+            # Try partial/fuzzy search
+            for lvl_key, lvl in db["levels"].items():
+                for cat in lvl.get("categories", []):
+                    for sub in cat.get("subs", []):
+                        for point in sub.get("points", []):
+                            if isinstance(point, str):
+                                words = search_term.lower().split()
+                                if any(w in point.lower() for w in words):
+                                    found_any = True
+                                    break
+            if not found_any:
+                missed.append((ba_id, search_term))
+    
+    return annotated, missed
+
+# ─── 3. EXECUTE ──────────────────────────────────────────────────────────
+
+def main():
+    # Save discrepancies database
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(OUT_PATH, 'w', encoding='utf-8') as f:
+        json.dump(discrepancies, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ BrE/AmE discrepancies database saved: {OUT_PATH}")
+    print(f"   Categories: {len(discrepancies['categories'])}")
+    print(f"   Total items: {discrepancies['meta']['total_items']}")
+    
+    # Annotate CEFR
+    with open(CEFR_PATH, 'r', encoding='utf-8') as f:
+        cefr = json.load(f)
+    
+    a_c, m_c = find_and_annotate(cefr, annotation_map["CEFR"], "CEFR")
+    
+    with open(CEFR_PATH, 'w', encoding='utf-8') as f:
+        json.dump(cefr, f, ensure_ascii=False, indent=2)
+    
+    print(f"\n✅ CEFR database annotated: {a_c} points marked")
+    if m_c:
+        print(f"   ⚠️  Unmatched annotations ({len(m_c)}):")
+        for ba_id, term in m_c:
+            print(f"      {ba_id}: '{term}' not found")
+    
+    # Annotate American
+    with open(AME_PATH, 'r', encoding='utf-8') as f:
+        ame = json.load(f)
+    
+    a_a, m_a = find_and_annotate(ame, annotation_map["AMERICAN"], "AMERICAN")
+    
+    with open(AME_PATH, 'w', encoding='utf-8') as f:
+        json.dump(ame, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ American database annotated: {a_a} points marked")
+    if m_a:
+        print(f"   ⚠️  Unmatched annotations ({len(m_a)}):")
+        for ba_id, term in m_a:
+            print(f"      {ba_id}: '{term}' not found")
+    
+    print(f"\n🎯 Total discrepancies documented: {discrepancies['meta']['total_items']}")
+    print(f"📝 Total annotations added to CEFR: {a_c}")
+    print(f"📝 Total annotations added to American: {a_a}")
+
+if __name__ == "__main__":
+    main()

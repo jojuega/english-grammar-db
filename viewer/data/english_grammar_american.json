@@ -50,7 +50,7 @@
                 "Present simple: negative with don't/doesn't (I don't work, She doesn't play)",
                 "Present simple: questions with Do/Does (Do you work?, Does she play?)",
                 "Present simple: short answers (Yes, I do. / No, she doesn't.)",
-                "Present simple for habits and routines (I wake up at 7 every day)",
+                "Present simple for habits and routines (I wake up at 7 every day) [🇺🇸→🇬🇧 BrE/AmE: Woke is the only standard past tense.... → see discrepancies DB #BA-021]",
                 "Present simple for general facts and permanent situations",
                 "Present simple with adverbs of frequency (always, usually, often, sometimes, rarely, never)",
                 "Position of adverbs of frequency (before main verb, after 'to be')"
@@ -113,7 +113,7 @@
               "points": [
                 "Be going to: affirmative am/is/are going to + base form",
                 "Be going to: negative and questions",
-                "Be going to for plans and intentions (I'm going to visit my family)",
+                "Be going to for plans and intentions (I'm going to visit my family) [🇺🇸→🇬🇧 BrE/AmE: Imperative or present simple used: 'Take this stre... → see discrepancies DB #BA-004]",
                 "Be going to for predictions based on present evidence (Look at those clouds! It's going to rain)"
               ]
             },
@@ -133,7 +133,7 @@
             {
               "subcategory": "Shall",
               "points": [
-                "Shall for suggestions with I/we (Shall I open the window?)",
+                "Shall for suggestions with I/we (Shall I open the window?) [🇺🇸→🇬🇧 BrE/AmE: Common use of 'Shall I...?' for offers and 'Shall ... → see discrepancies DB #BA-029]",
                 "Shall for offers (Shall we dance?)"
               ]
             }
@@ -295,7 +295,7 @@
               "subcategory": "Prepositions of Place",
               "points": [
                 "At for specific points and locations (at the door, at the bus stop, at home, at school, at work)",
-                "On for surfaces and lines (on the table, on the wall, on the floor, on the street)",
+                "On for surfaces and lines (on the table, on the wall, on the floor, on the street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
                 "In for enclosed spaces and areas (in the room, in the box, in the garden, in the city)",
                 "Next to, under, between, in front of, behind, over, above, below, among, opposite, near"
               ]
@@ -408,7 +408,7 @@
                 "fall → fell → fallen",
                 "feel → felt → felt",
                 "find → found → found",
-                "get → got → got/gotten (AmE: got for receiving, gotten otherwise; BrE: got)",
+                "get → got → got/gotten (AmE: got for receiving, gotten otherwise; BrE: got) [🇺🇸→🇬🇧 BrE/AmE: Past participle is got: 'I've got a cold' (have/po... → see discrepancies DB #BA-005]",
                 "give → gave → given",
                 "grow → grew → grown",
                 "have → had → had",
@@ -417,7 +417,7 @@
                 "keep → kept → kept",
                 "know → knew → known",
                 "lead → led → led",
-                "learn → learned/learnt → learned/learnt (AmE: regular; BrE: both)",
+                "learn → learned/learnt → learned/learnt (AmE: regular; BrE: both) [🇺🇸→🇬🇧 BrE/AmE: Both learnt and learned accepted; learnt is common... → see discrepancies DB #BA-008]",
                 "leave → left → left",
                 "let → let → let",
                 "lose → lost → lost",
@@ -454,11 +454,58 @@
               "description": "Basic phrasal verbs describing visible, physical actions. Source: Cambridge EVP (4 at A1).",
               "points": [
                 "get up — leave your bed after sleeping",
-                "wake up — stop sleeping",
+                "wake up — stop sleeping [🇺🇸→🇬🇧 BrE/AmE: Woke is the only standard past tense.... → see discrepancies DB #BA-021]",
                 "sit down — move into a sitting position",
                 "stand up — rise to a standing position",
                 "come in — enter a room or building",
                 "go out — leave home for social reasons"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "A1 Syntax — Basic Sentence Structure",
+              "description": "Simple sentence formation, sentence types, subject-verb-object. Source: British Council, Cambridge Grammar.",
+              "points": [
+                "Sentence types: statements/declarative (Subject + Verb + Object: I like coffee, She lives in London)",
+                "Sentence types: yes/no questions with inversion (Are you tired?, Do you like tea?)",
+                "Sentence types: Wh- questions (Where do you live?, What is your name?)",
+                "Sentence types: imperatives/commands (Sit down!, Don't run!, Let's go)",
+                "Sentence types: exclamations (What a beautiful day!, How nice!)",
+                "Basic SVO word order: Subject + Verb + Object as the fundamental English pattern",
+                "Subject identification: the subject is a noun or pronoun that performs the action (She runs, The cat sleeps)",
+                "Verb identification: the action or state word (run, is, have, like)",
+                "Object identification: the receiver of the action (I like coffee, She reads books)",
+                "Every English clause must have a subject (NOT: Is late. → He is late)",
+                "Imperative exception: the subject is implied/omitted (Come here! = You come here!)",
+                "Simple sentences: one independent clause with one subject and one predicate (I went to the store)",
+                "Affirmative vs negative sentences: using not, don't, doesn't, isn't, aren't (I don't like tea, She isn't here)",
+                "There is/are as dummy subject for existence (There is a book on the table)"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "A1 Punctuation and Capitalization — Basic Rules",
+              "description": "Fundamental rules for sentence boundaries, proper nouns, and basic punctuation. Source: British Council, Cambridge Grammar.",
+              "points": [
+                "Capitalization: always capitalize the first word of a sentence (The cat is sleeping. She went home.)",
+                "Capitalization: always capitalize the pronoun 'I' (I am happy, She and I went to the store)",
+                "Capitalization: always capitalize proper nouns — names (John, Sarah, London, England, Monday, December)",
+                "Period/full stop (.): used at the end of declarative sentences and statements (I like coffee. She lives in Paris.)",
+                "Question mark (?): used at the end of direct questions (Where do you live? Are you tired?)",
+                "Exclamation mark (!): used at the end of exclamations and strong commands (What a beautiful day! Sit down! Help!)",
+                "Comma (,): used to separate items in a list of three or more (I bought apples, oranges, bananas and milk)",
+                "Comma (,): used before 'and'/'but'/'or' when joining two independent clauses (I like tea, but she likes coffee)",
+                "Capitalization: days of the week, months, and holidays (Monday, January, Christmas) [🇺🇸→🇬🇧 BrE/AmE: HAVE a holiday: 'Where are you going for your holi... → see discrepancies DB #BA-047]",
+                "Capitalization: nationalities, languages, and countries (Spanish, English, French, Germany, Japan, American)",
+                "No capitalization for seasons (spring, summer, fall, winter) unless part of a title"
               ]
             }
           ]
@@ -483,13 +530,13 @@
             {
               "subcategory": "Present Perfect",
               "points": [
-                "Present perfect: form have/has + past participle (regular and irregular past participles)",
+                "Present perfect: form have/has + past participle (regular and irregular past participles) [🇺🇸→🇬🇧 BrE/AmE: Present perfect REQUIRED with just, already, yet f... → see discrepancies DB #BA-001]",
                 "Present perfect: affirmative (I've visited, She's gone), negative (I haven't seen), questions (Have you ever...?)",
-                "Present perfect for life experiences without specific time (I've been to Paris, She's never eaten sushi)",
+                "Present perfect for life experiences without specific time (I've been to Paris, She's never eaten sushi) [🇺🇸→🇬🇧 BrE/AmE: Present perfect preferred: 'I've lost my key' (sti... → see discrepancies DB #BA-002]",
                 "Present perfect with ever (Have you ever been to...?) and never (I've never tried that)",
                 "Present perfect with just for very recent actions (I've just finished my homework)",
                 "Present perfect with already for earlier than expected (I've already eaten)",
-                "Present perfect with yet in questions and negatives (Have you finished yet?, I haven't done it yet)",
+                "Present perfect with yet in questions and negatives (Have you finished yet?, I haven't done it yet) [🇺🇸→🇬🇧 BrE/AmE: Yet at END position: 'Have you finished yet?'... → see discrepancies DB #BA-055]",
                 "Present perfect with for + duration (I've lived here for five years / since 2019)",
                 "Present perfect with since + starting point (I've known her since 2010)",
                 "Present perfect vs past simple: time reference distinction (experience/life vs specific completed past time)"
@@ -525,14 +572,14 @@
               "points": [
                 "Past perfect: form had + past participle for all subjects",
                 "Past perfect for an action completed before another past action (When I arrived, they had already left)",
-                "Past perfect with already, just, never (He had already eaten when I invited him)",
+                "Past perfect with already, just, never (He had already eaten when I invited him) [🇺🇸→🇬🇧 BrE/AmE: Past perfect used less commonly; simple past prefe... → see discrepancies DB #BA-003]",
                 "Past perfect for sequencing and clarifying the order of past events"
               ]
             },
             {
               "subcategory": "Used to",
               "points": [
-                "Used to + base form for past habits that no longer happen (I used to play tennis every weekend)",
+                "Used to + base form for past habits that no longer happen (I used to play tennis every weekend) [🇺🇸→🇬🇧 BrE/AmE: at the weekend: 'What are you doing at the weekend... → see discrepancies DB #BA-033]",
                 "Used to for past states that are no longer true (I used to live in London, She used to be shy)",
                 "Didn't use to: negative form for absence of past habit",
                 "Did you use to...?: question form"
@@ -548,7 +595,7 @@
               "points": [
                 "Will vs going to: detailed comparison of uses",
                 "Will for predictions without present evidence (I think it will rain tomorrow)",
-                "Going to for plans and intentions decided before speaking",
+                "Going to for plans and intentions decided before speaking [🇺🇸→🇬🇧 BrE/AmE: Imperative or present simple used: 'Take this stre... → see discrepancies DB #BA-004]",
                 "Going to for predictions based on present evidence (Look at those clouds, it's going to rain)",
                 "Will for spontaneous decisions at the moment of speaking",
                 "Present continuous for fixed future arrangements (I'm meeting her tomorrow at 3)",
@@ -570,7 +617,7 @@
                 "Mustn't for strong prohibition (You mustn't smoke in here, it's illegal)",
                 "Must vs have to: internal vs external obligation distinction",
                 "Need to for necessity (I need to buy groceries)",
-                "Don't need to / needn't for lack of necessity"
+                "Don't need to / needn't for lack of necessity [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]"
               ]
             },
             {
@@ -630,9 +677,9 @@
               "subcategory": "Second Conditional",
               "points": [
                 "Second conditional for unreal/hypothetical present or future: If + past simple, would + base form (If I had more money, I would travel the world)",
-                "If I were... (were for all persons in formal/written English: If I were you, If she were here)",
+                "If I were... (were for all persons in formal/written English: If I were you, If she were here) [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]",
                 "Would in the main clause: could and might also possible (If I spoke French, I could work in Paris)",
-                "Second conditional for giving advice: If I were you, I would...",
+                "Second conditional for giving advice: If I were you, I would... [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]",
                 "Wish + past simple for present wishes about unreal situations (I wish I was/were taller, I wish I lived by the beach)"
               ]
             }
@@ -731,14 +778,14 @@
               "subcategory": "Verb + -ing",
               "points": [
                 "Verbs always followed by -ing: enjoy, finish, mind (would you mind), suggest, recommend, keep (continue), avoid, consider, discuss, practise, miss, imagine, delay, postpone, admit, deny",
-                "Verb + -ing after prepositions (good at singing, interested in learning, tired of waiting, afraid of flying, look forward to meeting, think about/of doing)",
+                "Verb + -ing after prepositions (good at singing, interested in learning, tired of waiting, afraid of flying, look forward to meeting, think about/of doing) [🇺🇸→🇬🇧 BrE/AmE: Both learnt and learned accepted; learnt is common... → see discrepancies DB #BA-008]",
                 "Go + -ing for recreational activities (go swimming, go shopping, go running, go fishing, go skiing)"
               ]
             },
             {
               "subcategory": "Verb + to-infinitive",
               "points": [
-                "Verbs followed by to-infinitive: want, decide, hope, expect, plan, agree, offer, promise, refuse, learn, need, would like, would love, would prefer, seem, appear, tend, manage, fail, afford, arrange, attempt",
+                "Verbs followed by to-infinitive: want, decide, hope, expect, plan, agree, offer, promise, refuse, learn, need, would like, would love, would prefer, seem, appear, tend, manage, fail, afford, arrange, attempt [🇺🇸→🇬🇧 BrE/AmE: Both learnt and learned accepted; learnt is common... → see discrepancies DB #BA-008]",
                 "Adjective + to-infinitive (happy to help, difficult to understand, easy to use, important to remember)",
                 "Expressing purpose with to + infinitive (I went to the store to buy milk)",
                 "Expressing purpose with for + noun/gerund (I went to the store for milk, this tool is for cutting)"
@@ -794,7 +841,7 @@
             {
               "subcategory": "Common Phrasal Verbs",
               "points": [
-                "Wake up, get up, stand up, sit down, lie down",
+                "Wake up, get up, stand up, sit down, lie down [🇺🇸→🇬🇧 BrE/AmE: Woke is the only standard past tense.... → see discrepancies DB #BA-021]",
                 "Turn on/off (lights, TV), put on/take off (clothes), pick up (lift/collect)",
                 "Look at, look for (search), look after (take care of)",
                 "Come in, go out, come back, go back, get back (return)",
@@ -808,7 +855,7 @@
               "subcategory": "Special Verbs",
               "points": [
                 "Make vs do: common collocations (make a mistake, make a decision, make dinner / do homework, do the dishes, do business)",
-                "Have vs take: common collocations (have a shower/bath, have breakfast/lunch, have a good time / take a break, take a walk, take a photo)",
+                "Have vs take: common collocations (have a shower/bath, have breakfast/lunch, have a good time / take a break, take a walk, take a photo) [🇺🇸→🇬🇧 BrE/AmE: HAVE is the default delexical verb: 'I'm going to ... → see discrepancies DB #BA-046]",
                 "Get: basic uses (get up, get home, get a job, get tired, get married, get ready, get the message)",
                 "Verbs with two objects (direct and indirect): give someone something / give something to someone (She gave me a book / She gave a book to me)"
               ]
@@ -830,9 +877,9 @@
             {
               "subcategory": "Question Tags (Introduction)",
               "points": [
-                "Question tags with be: positive statement + negative tag (You're tired, aren't you?)",
-                "Question tags: negative statement + positive tag (You aren't tired, are you?)",
-                "Question tags with auxiliary verbs: do/does/did, have/has/had, can/could, will/would"
+                "Question tags with be: positive statement + negative tag (You're tired, aren't you?) [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
+                "Question tags: negative statement + positive tag (You aren't tired, are you?) [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
+                "Question tags with auxiliary verbs: do/does/did, have/has/had, can/could, will/would [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]"
               ]
             }
           ]
@@ -893,7 +940,7 @@
                 "teach → taught → taught",
                 "tear → tore → torn",
                 "throw → threw → thrown",
-                "wake → woke → woken",
+                "wake → woke → woken [🇺🇸→🇬🇧 BrE/AmE: Woke is the only standard past tense.... → see discrepancies DB #BA-021]",
                 "win → won → won"
               ]
             }
@@ -926,13 +973,63 @@
                 "lie down — put your body in a horizontal position",
                 "run away — escape by running",
                 "throw away — discard something",
-                "try on — put on clothing to test fit",
+                "try on — put on clothing to test fit [🇺🇸→🇬🇧 BrE/AmE: Fitted is the standard past tense: 'The shirt fitt... → see discrepancies DB #BA-015]",
                 "write down — record in writing",
                 "give back — return something to its owner",
                 "take back — return something to where it was",
                 "switch on/off — turn on/off (especially electrical)",
                 "put away — store something in its proper place",
                 "clean up — make a place clean and tidy"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "A2 Syntax — Compound Sentences & Clause Elements",
+              "description": "Compound sentences, clause elements (S,V,O), direct/indirect objects. Source: British Council, Azar-Hagen Fundamentals.",
+              "points": [
+                "Compound sentences: joining two independent clauses with coordinating conjunctions FANBOYS (for, and, nor, but, or, yet, so)",
+                "Compound sentences with 'and' for addition (I like tea and I like coffee)",
+                "Compound sentences with 'but' for contrast (She is tired but she is happy)",
+                "Compound sentences with 'or' for alternatives (You can stay or you can leave)",
+                "Compound sentences with 'so' for result (It was raining, so we stayed home)",
+                "Clause elements: Subject (S) — who or what the sentence is about",
+                "Clause elements: Verb (V) — the action or state",
+                "Clause elements: Object (O) — who or what receives the action (direct object)",
+                "Clause elements: Indirect Object (IO) — who benefits from the action (She gave me a book) [🇺🇸→🇬🇧 BrE/AmE: Fitted is the standard past tense: 'The shirt fitt... → see discrepancies DB #BA-015]",
+                "Direct vs indirect objects: word order (She gave a book to me = She gave me a book)",
+                "Transitive verbs: verbs that require a direct object (I bought a car, She likes music)",
+                "Intransitive verbs: verbs that do not take an object (He arrived, She smiled, They laughed)",
+                "Verbs that can be both transitive and intransitive (She sang / She sang a song; We ate / We ate pizza)",
+                "Subject-verb agreement in compound sentences (He runs and she walks / They run and walk)",
+                "Adverbials (A): adding time, place, manner to clauses (I went to the park yesterday, She speaks softly)"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "A2 Punctuation — Apostrophes and Quotation Marks",
+              "description": "Apostrophes for possession and contractions, basic quotation marks for speech. Source: British Council.",
+              "points": [
+                "Apostrophe (ʼ) for contractions: joining subject + verb (I'm, you're, he's, she's, it's, we're, they're)",
+                "Apostrophe (ʼ) for negative contractions: don't, doesn't, didn't, can't, won't, isn't, aren't, wasn't, weren't, haven't, hasn't, hadn't",
+                "Apostrophe (ʼ) for possessive singular nouns: add 's (John's book, the cat's tail, my mother's car)",
+                "Apostrophe (ʼ) for possessive plural nouns ending in -s: add ' after the s (the students' books, my parents' house)",
+                "Apostrophe (ʼ) for possessive plural nouns not ending in -s: add 's (the children's toys, the men's room)",
+                "Quotation marks (\" \"): used to enclose direct speech or quotes (She said \"I'm tired.\" \"Come here,\" he said)",
+                "Period/comma placement inside quotation marks in American English (She said \"I'm tired.\" He replied \"No,\" she said)",
+                "Comma (,): after introductory words/phrases (Well, I think so. However, he was late. First, mix the ingredients.)",
+                "Comma (,): used with direct address (John, can you help me? I'm sorry, sir. Thanks, Mary.)",
+                "Comma (,): used in dates (June 5, 2024) and addresses (London, England, 10 Downing Street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
+                "Comma (,): used after 'Yes' and 'No' in responses (Yes, I do. No, I don't think so.)",
+                "Capitalization: titles of books, movies, songs, TV shows (The Lord of the Rings, Titanic, Yesterday)",
+                "Capitalization: capitalize the first and last words and all major words in titles; do not capitalize articles, conjunctions, or short prepositions in the middle (The Cat in the Hat, Gone with the Wind)"
               ]
             }
           ]
@@ -1069,7 +1166,7 @@
                 "First conditional: with unless (= if not), as long as, provided that, on condition that",
                 "Second conditional: for hypothetical/unreal present and future situations",
                 "First vs second conditional: real possibility vs unreal/hypothetical distinction",
-                "Second conditional: If I were you for giving advice"
+                "Second conditional: If I were you for giving advice [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]"
               ]
             },
             {
@@ -1077,7 +1174,7 @@
               "points": [
                 "Third conditional for unreal/hypothetical past situations: If + past perfect, would have + past participle (If I had studied harder, I would have passed the exam)",
                 "Third conditional for expressing regrets about the past (If I hadn't said that, we would still be friends)",
-                "Third conditional with could have / might have for different past possibilities (If you had called, I could have helped)",
+                "Third conditional with could have / might have for different past possibilities (If you had called, I could have helped) [🇺🇸→🇬🇧 BrE/AmE: different TO or FROM: 'This is different to what I... → see discrepancies DB #BA-035]",
                 "Conditionals review: comparing zero, first, second, and third conditionals side by side"
               ]
             },
@@ -1140,7 +1237,7 @@
                 "Zero article: generalizations with plural and uncountable nouns, proper names, meals, sports, subjects",
                 "Articles with geographical names: the + rivers/oceans/mountain ranges/deserts (the Thames, the Pacific, the Alps, the Sahara)",
                 "Articles with geographical names: no article for countries (except those with plural/republic/kingdom: the UK, the USA, the Netherlands), cities, individual mountains, lakes",
-                "Articles with institutions: go to school/hospital/prison/church (as a patient/student/inmate) vs go to the school (as a visitor)",
+                "Articles with institutions: go to school/hospital/prison/church (as a patient/student/inmate) vs go to the school (as a visitor) [🇺🇸→🇬🇧 BrE/AmE: NO article for institutional meaning: 'He's in hos... → see discrepancies DB #BA-043]",
                 "Articles with musical instruments (play the piano) vs sports (play tennis)"
               ]
             },
@@ -1187,13 +1284,15 @@
             {
               "subcategory": "Verb + -ing (Gerund)",
               "points": [
-                "Verbs followed by gerund: admit, avoid, can't help, can't stand, consider, delay, deny, discuss, dislike, enjoy, feel like, finish, give up, imagine, involve, keep (on), mention, mind, miss, postpone, practise, recommend, regret, risk, suggest, tolerate, understand"
+                "Verbs followed by gerund: admit, avoid, can't help, can't stand, consider, delay, deny, discuss, dislike, enjoy, feel like, finish, give up, imagine, involve, keep (on), mention, mind, miss, postpone, practise, recommend, regret, risk, suggest, tolerate, understand",
+                "Verb + preposition + gerund: insist on doing, apologize for being, succeed in doing, approve of doing",
+                "Verb + object + preposition + gerund: accuse someone of (doing), congratulate someone on (doing), thank someone for (doing), prevent someone from (doing)"
               ]
             },
             {
               "subcategory": "Verb + to-infinitive",
               "points": [
-                "Verbs followed by to-infinitive: afford, agree, appear, arrange, ask, attempt, choose, claim, decide, demand, deserve, expect, fail, happen, help, hesitate, hope, intend, learn, manage, need, offer, plan, prepare, pretend, promise, refuse, seem, swear, tend, threaten, volunteer, wait, want, wish, would like, would love, yearn"
+                "Verbs followed by to-infinitive: afford, agree, appear, arrange, ask, attempt, choose, claim, decide, demand, deserve, expect, fail, happen, help, hesitate, hope, intend, learn, manage, need, offer, plan, prepare, pretend, promise, refuse, seem, swear, tend, threaten, volunteer, wait, want, wish, would like, would love, yearn [🇺🇸→🇬🇧 BrE/AmE: Both learnt and learned accepted; learnt is common... → see discrepancies DB #BA-008]"
               ]
             },
             {
@@ -1208,8 +1307,8 @@
                 "Let + object + base form (Let me go, Let him speak)",
                 "Make + object + base form for forcing (She made me do it)",
                 "Help + object + base form OR to-infinitive (Help me carry this / Help me to carry this)",
-                "Verbs of perception: see/hear/watch/notice/feel + object + base form for complete action (I saw him cross the street)",
-                "Verbs of perception: see/hear/watch/notice/feel + object + -ing for action in progress (I saw him crossing the street)"
+                "Verbs of perception: see/hear/watch/notice/feel + object + base form for complete action (I saw him cross the street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
+                "Verbs of perception: see/hear/watch/notice/feel + object + -ing for action in progress (I saw him crossing the street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]"
               ]
             },
             {
@@ -1279,12 +1378,12 @@
             {
               "subcategory": "Question Tags",
               "points": [
-                "Question tags with all auxiliary verbs (isn't it?, aren't you?, don't you?, didn't he?, haven't they?, can't you?, won't she?)",
+                "Question tags with all auxiliary verbs (isn't it?, aren't you?, don't you?, didn't he?, haven't they?, can't you?, won't she?) [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
                 "Positive statement + negative tag (You're coming, aren't you?)",
                 "Negative statement + positive tag (You don't like it, do you?)",
-                "Question tags with 'let's': Let's go, shall we?",
-                "Question tags with imperatives: Open the door, will you? / Don't be late, will you?",
-                "Intonation in question tags: rising (genuine question, uncertain) vs falling (confirmation expected, rhetorical)",
+                "Question tags with 'let's': Let's go, shall we? [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
+                "Question tags with imperatives: Open the door, will you? / Don't be late, will you? [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
+                "Intonation in question tags: rising (genuine question, uncertain) vs falling (confirmation expected, rhetorical) [🇺🇸→🇬🇧 BrE/AmE: Question tags are VERY FREQUENT with a wide variet... → see discrepancies DB #BA-056]",
                 "Special tags: I am → aren't I?, There is → isn't there?, This is → isn't it?, Nobody → do they?"
               ]
             },
@@ -1335,7 +1434,7 @@
                 "bleed → bled → bled",
                 "blow → blew → blown",
                 "broadcast → broadcast → broadcast",
-                "burn → burned/burnt → burned/burnt (AmE: burned; BrE: both)",
+                "burn → burned/burnt → burned/burnt (AmE: burned; BrE: both) [🇺🇸→🇬🇧 BrE/AmE: Both burnt and burned accepted; burnt is more comm... → see discrepancies DB #BA-006]",
                 "burst → burst → burst",
                 "creep → crept → crept",
                 "deal → dealt → dealt",
@@ -1424,6 +1523,55 @@
               ]
             }
           ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "B1 Syntax — Complex Sentences & Verb Patterns",
+              "description": "Complex sentences with subordination, linking verbs, complements. Source: British Council, Azar-Hagen Fundamentals.",
+              "points": [
+                "Complex sentences: independent clause + dependent/subordinate clause (I stayed home because it rained)",
+                "Subordinating conjunctions for reason: because, since, as (I left because I was tired)",
+                "Subordinating conjunctions for time: when, while, before, after, until, as soon as (I'll call you when I arrive)",
+                "Subordinating conjunctions for condition: if, unless (If it rains, I'll stay home)",
+                "Subordinating conjunctions for contrast: although, even though (Although it was cold, we went out)",
+                "Linking verbs (copular verbs): be, become, seem, appear, look, sound, smell, taste, feel + adjective/noun complement",
+                "Subject complements after linking verbs (She is a doctor, He seems tired, The soup tastes delicious)",
+                "Object complements: adjectives/nouns that describe the object (They painted the wall blue, We elected her president)",
+                "Ditransitive verbs: verbs that take two objects — direct and indirect (She gave me a gift, He told us a story)",
+                "Verb + indirect object + direct object vs Verb + direct object + to/for + indirect (She gave me a book / She gave a book to me)",
+                "Common ditransitive verbs: give, send, tell, show, offer, lend, pass, throw, buy, make",
+                "There + be patterns for existence (There is/are, There was/were, There will be, There has been)",
+                "It as dummy/empty subject (It is raining, It is important to study, It takes time)",
+                "Cleft-like emphasis with 'it' (It was John who called, not Mary) — introductory"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "B1 Punctuation — Colons, Semicolons, and Advanced Commas",
+              "description": "Colons and semicolons introduction, commas with subordinate clauses and non-restrictive elements. Source: Cambridge Grammar.",
+              "points": [
+                "Colon (:): used to introduce a list (You need the following items: a pen, paper, and a book)",
+                "Colon (:): used to introduce an explanation or example (He had one goal: to win the championship)",
+                "Colon (:): used to introduce a quotation (The president said: 'We will not give up')",
+                "Semicolon (;): used to join two closely related independent clauses without a conjunction (I love Paris; it's my favorite city)",
+                "Semicolon (;): used to separate items in a complex list that already contains commas (The winners were John, from London; Mary, from Paris; and Tom, from Berlin)",
+                "Comma (,): used after subordinate clauses at the beginning of a sentence (When I arrived, they were already eating. If it rains, I'll stay home.)",
+                "No comma when subordinate clause follows the main clause (I'll stay home if it rains. They were eating when I arrived.)",
+                "Comma (,): with non-defining relative clauses that provide extra, non-essential information (My brother, who lives in Paris, is a doctor)",
+                "Comma (,): after linking/adverbial words (however, therefore, moreover, furthermore, consequently, nevertheless — However, I disagree. Therefore, we must act.)",
+                "Comma (,): to separate contrasting elements (She was happy, not sad. He arrived early, unlike the others.)",
+                "Apostrophe: its vs it's — it's = contraction of it is or it has (It's raining, It's been a long day); its = possessive determiner (The dog wagged its tail)",
+                "Quotation marks: single vs double quotes — American English uses double quotes first, single quotes for quotes within quotes (She said, \"He whispered, 'I'm scared.'\")",
+                "Dash (—): used informally to indicate a pause, to set off additional information, or for emphasis (He finally arrived — three hours late)"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1471,7 +1619,7 @@
                 "Be due to + base form for scheduled/expected events (The plane is due to arrive at 3:30)",
                 "Be bound to + base form for certainty (With that attitude, you're bound to fail)",
                 "Be likely to / be unlikely to + base form for probability (It's likely to rain, She's unlikely to agree)",
-                "Be set to + base form for planned/expected events (The company is set to announce record profits)",
+                "Be set to + base form for planned/expected events (The company is set to announce record profits) [🇺🇸→🇬🇧 BrE/AmE: Fitted is the standard past tense: 'The shirt fitt... → see discrepancies DB #BA-015]",
                 "Be on the verge/point of + -ing (She was on the verge of tears, The country is on the point of economic collapse)"
               ]
             }
@@ -1486,9 +1634,9 @@
                 "Permission: can (informal), could (polite), may (formal), might (very formal/rare), be allowed to (all tenses)",
                 "Obligation: must (internal/personal), have to (external/rules), need to (necessity), be supposed to (expectation), be to (formal instruction)",
                 "Prohibition: mustn't (strong), can't (rule-based), may not (formal), not be allowed to (general), be forbidden to (very formal)",
-                "Lack of obligation: don't have to, needn't (more formal), don't need to",
-                "Need as a modal verb (restricted to negatives/questions): Need I say more? / You needn't have worried",
-                "Dare as a modal verb (mainly in negatives): I dare not tell him / How dare you!"
+                "Lack of obligation: don't have to, needn't (more formal), don't need to [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]",
+                "Need as a modal verb (restricted to negatives/questions): Need I say more? / You needn't have worried [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]",
+                "Dare as a modal verb (mainly in negatives): I dare not tell him / How dare you! [🇺🇸→🇬🇧 BrE/AmE: Dare can be used as a modal (no -s, no do-support)... → see discrepancies DB #BA-032]"
               ]
             },
             {
@@ -1501,7 +1649,7 @@
                 "Can't have + past participle for past impossibility (He can't have taken it, he wasn't there)",
                 "May/might/could have + past participle for past possibility (She might have missed the bus)",
                 "Should/ought to have + past participle for unfulfilled expectation or criticism (You should have told me!)",
-                "Needn't have + past participle (something was done but was unnecessary) vs didn't need to (whether done or not is ambiguous)",
+                "Needn't have + past participle (something was done but was unnecessary) vs didn't need to (whether done or not is ambiguous) [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]",
                 "Will for assumptions about the present based on typical behavior (That'll be John at the door — he always comes at this time)",
                 "Will have + past participle for assumptions about the past (You'll have heard the news by now)"
               ]
@@ -1509,8 +1657,8 @@
             {
               "subcategory": "Verbs of the Senses",
               "points": [
-                "See, hear, feel, smell, taste, notice, watch + object + base form for complete actions perceived (I saw him cross the street)",
-                "See, hear, feel, smell, taste, notice, watch + object + -ing form for actions in progress when perceived (I saw him crossing the street)",
+                "See, hear, feel, smell, taste, notice, watch + object + base form for complete actions perceived (I saw him cross the street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
+                "See, hear, feel, smell, taste, notice, watch + object + -ing form for actions in progress when perceived (I saw him crossing the street) [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
                 "Look, sound, smell, taste, feel + adjective for describing sensations and impressions (That sounds interesting, This tastes delicious, You look tired)",
                 "Look like, sound like, feel like + noun/clause for resemblance and impressions (He looks like his father, It sounds like you had a great time)",
                 "As if / as though + clause after sense verbs (It looks as if it's going to rain, You sound as though you have a cold)"
@@ -1525,6 +1673,26 @@
                 "Get + object + to-infinitive for persuading someone to do something (I got him to help me)",
                 "Have + object + base form for making/ordering someone (I'll have my assistant send you the details)"
               ]
+            },
+            {
+              "subcategory": "Causative Have/Get Structures — B2 Level",
+              "description": "Causative structures with have and get for expressing that someone else does something for you. Source: Azar-Hagen Understanding and Using English Grammar, Cambridge Grammar.",
+              "points": [
+                "Causative have: have + object + past participle — arrange for someone to do something for you (I had my car repaired, She had her hair cut, We had the house painted)",
+                "Causative get: get + object + past participle — same meaning, more informal (I got my phone fixed, She got her nails done, We got the windows cleaned)",
+                "Causative have for negative experiences: have + object + past participle (I had my wallet stolen, She had her car broken into, He had his application rejected)",
+                "Causative get + object + to-infinitive: persuade someone to do something (I got him to help me with the project, She got her boss to approve the leave)",
+                "Causative have + object + base form: tell/order someone to do something (I'll have my assistant send you the documents, She had everyone wait in the conference room)",
+                "Causative make + object + base form: force someone to do something (My boss made me work late, The teacher made him rewrite the essay)",
+                "Causative let + object + base form: allow someone to do something (My parents let me borrow the car, The rules don't let us take photos)",
+                "Causative help + object + base form/to-infinitive: assist someone (She helped me carry the bags / She helped me to carry the bags)",
+                "Causative get + object + past participle in questions and negatives (Where did you get your watch repaired? I couldn't get my computer fixed in time)",
+                "Causative have + object + base form vs have + object + past participle: active vs passive meaning distinction (I had everyone clean the office vs I had the office cleaned)",
+                "Causative need/want + -ing for passive meaning with things (The car needs washing = needs to be washed, The house wants painting = needs to be painted)",
+                "Causative get + object + adjective/participle for state (I need to get my passport renewed, She got her eyes checked, We got everything ready)",
+                "Causative all tenses: have/get something done in present, past, future, present perfect, and with modals (I have my hair cut every month; I had it done last week; I will have it done next week; I have already had it done; I must get it done)",
+                "Difference between 'I cut my hair' (I did it myself) and 'I had my hair cut' (someone else did it) — fundamental meaning distinction"
+              ]
             }
           ]
         },
@@ -1535,7 +1703,7 @@
               "subcategory": "Mixed Conditionals",
               "points": [
                 "Past condition → present result: If + past perfect, would + base form (If I had studied harder at school, I would have a better job now)",
-                "Present condition → past result: If + past simple, would have + past participle (If I were more organized, I would have finished on time)",
+                "Present condition → past result: If + past simple, would have + past participle (If I were more organized, I would have finished on time) [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]",
                 "Past condition → future result: If + past perfect, would + base form (If you had taken the course, you would be qualified for the promotion next year)"
               ]
             },
@@ -1675,7 +1843,7 @@
             {
               "subcategory": "Participle Clauses",
               "points": [
-                "Present participle (-ing) for simultaneous actions: Walking down the street, I noticed a new shop",
+                "Present participle (-ing) for simultaneous actions: Walking down the street, I noticed a new shop [🇺🇸→🇬🇧 BrE/AmE: in + street: 'She lives in Oxford Street.'... → see discrepancies DB #BA-034]",
                 "Present participle (-ing) for reason: Being a doctor, she knew exactly what to do (=Because she was a doctor)",
                 "Past participle (-ed/3rd) for passive meaning: Written in a hurry, the report contained many errors (=Because it was written in a hurry)",
                 "Perfect participle (having + past participle) for earlier actions: Having finished her homework, she went out to play",
@@ -1688,7 +1856,7 @@
               "subcategory": "Cleft Sentences (Introduction)",
               "points": [
                 "It-cleft: It + be + focused element + that/who + rest of clause (It was John who broke the window)",
-                "Wh-cleft (pseudo-cleft): What + clause + be + focused element (What I need is a holiday, What she said was interesting)",
+                "Wh-cleft (pseudo-cleft): What + clause + be + focused element (What I need is a holiday, What she said was interesting) [🇺🇸→🇬🇧 BrE/AmE: HAVE a holiday: 'Where are you going for your holi... → see discrepancies DB #BA-047]",
                 "All-cleft: All + (that) + clause + be + focused element (All I want is to be happy, All you need is love)"
               ]
             }
@@ -1718,15 +1886,15 @@
               "description": "Lower-frequency irregular verbs for academic and professional contexts. Source: Cambridge Grammar.",
               "points": [
                 "arise → arose → arisen",
-                "awake → awoke → awoken",
+                "awake → awoke → awoken [🇺🇸→🇬🇧 BrE/AmE: Woke is the only standard past tense.... → see discrepancies DB #BA-021]",
                 "bear → bore → borne (born for birth)",
                 "beat → beat → beaten",
                 "bind → bound → bound",
                 "breed → bred → bred",
                 "cling → clung → clung",
-                "dive → dived/dove → dived (AmE: dove common as past)",
+                "dive → dived/dove → dived (AmE: dove common as past) [🇺🇸→🇬🇧 BrE/AmE: Dived is the ONLY standard form.... → see discrepancies DB #BA-014]",
                 "dwell → dwelt/dwelled → dwelt/dwelled",
-                "fit → fit/fitted → fit/fitted (AmE: fit; BrE: fitted for past)",
+                "fit → fit/fitted → fit/fitted (AmE: fit; BrE: fitted for past) [🇺🇸→🇬🇧 BrE/AmE: Fitted is the standard past tense: 'The shirt fitt... → see discrepancies DB #BA-015]",
                 "forecast → forecast → forecast",
                 "grind → ground → ground",
                 "leap → leaped/leapt → leaped/leapt",
@@ -1812,6 +1980,57 @@
               ]
             }
           ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "B2 Syntax — Advanced Clause Types & Complementation",
+              "description": "Coordination vs subordination, verb complementation, ergative verbs, clause reduction. Source: Cambridge Grammar, Azar-Hagen Understanding & Using.",
+              "points": [
+                "Coordination vs subordination: independent clauses joined equally (coordination) vs one clause depending on another (subordination)",
+                "Correlative conjunctions: both...and, either...or, neither...nor, not only...but also",
+                "Complex-compound sentences: two or more independent clauses + at least one dependent clause",
+                "Ergative verbs: verbs where the object of the transitive use becomes the subject of the intransitive use (She opened the door / The door opened; I boiled the water / The water boiled)",
+                "Common ergative verbs: begin, break, change, close, cook, drop, end, finish, grow, improve, increase, melt, move, open, shut, start, stop, turn",
+                "Verb complementation: verb + that-clause (I believe that he is right, She suggested that we leave)",
+                "Verb complementation: verb + wh-clause (I don't know where she lives, He explained what happened)",
+                "Verb complementation: verb + if/whether clause (I wonder if she will come, She asked whether I was free)",
+                "Verb complementation: verb + to-infinitive vs verb + -ing (patterns by verb category)",
+                "Reduced clauses: using participles instead of full clauses (The man sitting there / The house built in 1900)",
+                "Adjective complements: adjective + that-clause (I'm happy that you came), adjective + to-infinitive (It's easy to use)",
+                "Noun complements: noun + that-clause (the fact that..., the idea that..., the belief that...)",
+                "Prepositional complements: preposition + wh-clause (It depends on what you mean), preposition + -ing (She's good at singing)",
+                "Existential 'there' in all tenses and with modals (There must be a mistake, There used to be a shop here, There is going to be a party)"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "B2 Punctuation — Semicolon, Dash, Ellipsis, and Parentheses",
+              "description": "Advanced semicolon use, em dash and en dash, ellipsis, parentheses, hyphens, and brackets. Source: Cambridge Grammar, Chicago Manual of Style.",
+              "points": [
+                "Em dash (—): used to set off a parenthetical thought with more emphasis than commas or parentheses (The results — though unexpected — were conclusive)",
+                "Em dash (—): used to indicate a sudden break in thought (I was going to — oh, never mind)",
+                "En dash (–): used to indicate ranges of numbers, dates, or time (1990–2000, pages 10–25, 3:00–5:00 PM)",
+                "Ellipsis (...): used to indicate omitted words in a quotation (The report stated that 'the findings... support the original hypothesis')",
+                "Ellipsis (...): used to indicate a trailing off of thought or suspense (I just don't know... maybe you're right)",
+                "Parentheses (()): used to enclose additional information, clarifications, or references (The study (published in 2024) found significant results)",
+                "Brackets ([]): used to add clarification or commentary inside a quotation (He said 'it [the policy] was a mistake')",
+                "Hyphen (-): used to form compound adjectives before a noun (well-known author, high-quality product, state-of-the-art technology, part-time job)",
+                "Hyphen (-): used with prefixes in certain cases (ex-president, self-esteem, all-inclusive, twenty-five (numbers 21-99))",
+                "Hyphen (-): used to avoid ambiguity or confusion (re-cover vs recover, re-sign vs resign, re-present vs represent)",
+                "Semicolon (;): used before conjunctive adverbs (He was late; therefore, he missed the beginning. She studied hard; consequently, she passed.)",
+                "Colon (:): used to introduce a formal list after a complete sentence (The conference had three main themes: sustainability, innovation, and inclusion)",
+                "Parentheses (()): punctuation of parentheses — period goes inside if the entire sentence is parenthetical, outside if only part of the sentence is",
+                "Comma (,): not used to separate a subject from its verb or a verb from its object (NOT: The team, won the game. / The study found, that the results were significant)",
+                "Slashes (/) for alternatives: and/or, either/or, his/her, pass/fail"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1858,8 +2077,8 @@
                 "May for concession in formal style: He may be rich, but he's certainly not happy",
                 "Might for reproach or annoyance: You might have told me! You might at least say thank you!",
                 "Must for annoying obligation from the speaker's perspective: Must you always interrupt? Do we really must go?",
-                "Need as a modal verb (restricted to questions and negatives): Need I say more? You needn't have bothered",
-                "Dare as a modal verb (mainly in negatives/questions): I dare not think what might happen, How dare you speak to me like that!"
+                "Need as a modal verb (restricted to questions and negatives): Need I say more? You needn't have bothered [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]",
+                "Dare as a modal verb (mainly in negatives/questions): I dare not think what might happen, How dare you speak to me like that! [🇺🇸→🇬🇧 BrE/AmE: Dare can be used as a modal (no -s, no do-support)... → see discrepancies DB #BA-032]"
               ]
             },
             {
@@ -1870,7 +2089,7 @@
                 "Should/ought to have + past participle for unfulfilled expectations: The package should have arrived by now",
                 "Might/may have + past participle for reproach: You might have warned me!",
                 "Could have + past participle for unrealized past ability/opportunity: I could have been a doctor",
-                "Needn't have vs didn't need to: You needn't have bought milk (you did buy it, unnecessarily) vs You didn't need to buy milk (whether you bought it or not is ambiguous)"
+                "Needn't have vs didn't need to: You needn't have bought milk (you did buy it, unnecessarily) vs You didn't need to buy milk (whether you bought it or not is ambiguous) [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]"
               ]
             }
           ]
@@ -1908,7 +2127,7 @@
             {
               "subcategory": "Were-Subjunctive (Past Subjunctive)",
               "points": [
-                "Were-subjunctive in second conditional: If I were you, If she were here",
+                "Were-subjunctive in second conditional: If I were you, If she were here [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]",
                 "Were-subjunctive after wish: I wish I were taller, I wish it were summer",
                 "Were-subjunctive after as if / as though: He acts as if he were the boss, She talks as though she were an expert",
                 "Were-subjunctive after suppose/supposing: Suppose she were to find out, what then?",
@@ -1951,6 +2170,15 @@
                 "Such + be + noun + that: Such was the force of the explosion that windows shattered for miles",
                 "Here/There + verb + subject: Here comes the bus, There goes our last chance",
                 "Prepositional phrase of place + verb + subject: On the top of the hill stood an old castle, Round the corner came a speeding car, In the middle of the room lay a dead body"
+              ]
+            },
+            {
+              "subcategory": "Causative Have/Get Structures — B2 Level",
+              "description": "Causative structures with have and get for expressing that someone else does something for you. Source: Azar-Hagen Understanding and Using English Grammar, Cambridge Grammar.",
+              "points": [
+                "Causative in passive reporting: have/get something done in reporting structures (It is believed that he had his house renovated, She is said to have had her portrait painted)",
+                "Causative get + reflexive + past participle for actions you need done to yourself (I need to get myself checked by a doctor, He got himself elected president, They got themselves invited to the ceremony)",
+                "Causative have + object + present participle for ongoing actions by others (I'll have the assistant preparing the report while I'm away, She had the team working on the project all weekend) [🇺🇸→🇬🇧 BrE/AmE: at the weekend: 'What are you doing at the weekend... → see discrepancies DB #BA-033]"
               ]
             }
           ]
@@ -2008,7 +2236,7 @@
                 "Concessive: Try as I might: Try as I might, I couldn't remember her name",
                 "Specification: In that: I was lucky in that I had some savings to fall back on",
                 "Dismissal: Not that: Not that I care, but what did he say?",
-                "Manner: As if/though, Like (informal): He treats me as if I were a child"
+                "Manner: As if/though, Like (informal): He treats me as if I were a child [🇺🇸→🇬🇧 BrE/AmE: Used similarly to AmE: 'If I were you...', 'I wish... → see discrepancies DB #BA-051]"
               ]
             }
           ]
@@ -2030,7 +2258,7 @@
               "subcategory": "Pronouns Extended",
               "points": [
                 "One/ones for substitution: the red one, the big ones, I need a new phone — the one I have is broken",
-                "Impersonal one for general statements: One should always be honest, One never knows",
+                "Impersonal one for general statements: One should always be honest, One never knows [🇺🇸→🇬🇧 BrE/AmE: One + one's is maintained: 'One should do one's be... → see discrepancies DB #BA-058]",
                 "Generic you/we/they for people in general: You never know what might happen, They say it's going to snow",
                 "Those who / people who for groups: Those who arrived early got the best seats",
                 "Such as a pronoun: Such was the situation when I arrived, More evidence, if such exists, will be presented"
@@ -2180,6 +2408,60 @@
                 "wean off — gradually stop using",
                 "whip up — create excitement; quickly prepare food",
                 "zero in on — focus attention on"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "C1 Syntax — Complex Complementation & Phrase Structure",
+              "description": "Extraposition, complex complementation, phrase structure analysis, post-modification. Source: Cambridge Grammar, British Council.",
+              "points": [
+                "Extraposition: moving a heavy subject to the end with 'it' (That he resigned surprised us → It surprised us that he resigned)",
+                "Extraposition patterns: It + be + adjective + that-clause (It is clear that...), It + be + adjective + to-infinitive (It is important to...)",
+                "It-cleft sentences for focus: It + be + focused element + that/who (It was the manager who made the final decision)",
+                "Wh-cleft (pseudo-cleft) sentences: What + clause + be + focus (What I need is more time, What bothers me is his attitude)",
+                "Phrase structure: Noun Phrase (NP) — determiner + pre-modifiers + head noun + post-modifiers (the three very old wooden chairs in the corner)",
+                "Phrase structure: Verb Phrase (VP) — auxiliary + main verb + complements (has been working, might have been taken)",
+                "Phrase structure: Adjective Phrase (AdjP) — intensifier + adjective + complement (very happy about the result, quite different from before) [🇺🇸→🇬🇧 BrE/AmE: different TO or FROM: 'This is different to what I... → see discrepancies DB #BA-035]",
+                "Phrase structure: Adverb Phrase (AdvP) — intensifier + adverb (very quickly, much more carefully)",
+                "Phrase structure: Prepositional Phrase (PP) — preposition + NP complement (in the garden, after the meeting, on top of the hill)",
+                "Post-modification in noun phrases: prepositional phrases (the man in the corner), relative clauses (the book that I read), participle clauses (the woman waiting outside)",
+                "Multiple post-modification: stacking modifiers after the head noun (a study of the effects of pollution on urban populations in developing countries)",
+                "Apposition: two noun phrases side by side referring to the same entity (My brother, a doctor, lives in Paris; The city of London)",
+                "Complement clauses within phrases: I like the idea that we might win, There's a chance she'll come",
+                "Stylistic fronting for emphasis and cohesion (That I cannot accept; Into the room walked a stranger)",
+                "Verb + it + complement + to-infinitive: find it difficult to, make it easy to, consider it important to",
+                "Verb + object + as/for complement: regard her as genius, see him as leader, describe it as revolutionary, mistake it for",
+                "Verb + reflexive pronoun: enjoy yourself, hurt yourself, teach yourself, introduce yourself",
+                "Verb + adjective + preposition patterns: be good at, be afraid of, be interested in, be famous for, be responsible for"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "C1 Punctuation — Advanced and Stylistic Usage",
+              "description": "Nuanced comma rules, quotation integration, register-specific punctuation, formatting conventions. Source: Chicago Manual of Style, Cambridge Grammar.",
+              "points": [
+                "Comma (,): with restrictive vs non-restrictive appositives (My brother, John, is visiting vs My brother John is visiting — appositive with vs without comma changes meaning)",
+                "Comma (,): with introductory participial and absolute phrases (Having finished the report, she went home. The meeting concluded, we left the room.)",
+                "Comma (,): to prevent misreading (In the valley below, the river flowed peacefully vs In the valley below the river flowed peacefully)",
+                "Comma (,): with correlative conjunctions (not only...but also, either...or) is generally not needed, but may be used for clarity",
+                "Quotation integration: how to integrate quotes smoothly with signal phrases and correct punctuation (According to Smith, 'the evidence is clear'; however, others disagree.)",
+                "Quotations: block quotations — long quotes (over 40 words/4 lines) are set off as block quotes without quotation marks",
+                "Colon (:): used to introduce a formal statement or lengthy quotation in academic writing (The author makes his position clear: 'We must act now or face the consequences.')",
+                "Semicolon (;): used in academic writing to create sophisticated sentence connections and to balance contrasting ideas",
+                "Capitalization: in titles following different style guides — APA, MLA, Chicago (sentence case vs title case conventions) [🇺🇸→🇬🇧 BrE/AmE: different TO or FROM: 'This is different to what I... → see discrepancies DB #BA-035]",
+                "Capitalization: after colons — lowercase when what follows is dependent on the preceding clause, capitalize when it's an independent clause or formal rule",
+                "Numbers: spell out numbers one through nine/one hundred, use numerals for 10+ (with style guide variations)",
+                "Slashes (/) in formal contexts: representing 'and' or 'or' should be avoided in formal academic writing; spell out instead",
+                "Apostrophe: possessive of singular proper nouns ending in -s (James's car vs James' car — Chicago vs APA/MLA style variation)",
+                "Punctuation conventions in scientific/technical writing: SI unit spacing, abbreviation punctuation, footnote markers"
               ]
             }
           ]
@@ -2348,7 +2630,7 @@
                 "Partial negation with not + all/every/always: Not all that glitters is gold, Not every idea is a good one, I don't always agree with him",
                 "Double negation for positive emphasis: I can't not go = I feel compelled to go, It's not uncommon = It's fairly common",
                 "Not...but rather... for contrastive focus: The problem is not a lack of talent but rather a lack of opportunity",
-                "Nuanced negation of modals: mustn't (prohibition), needn't (lack of necessity), can't (impossibility), won't (refusal), shan't (formal refusal)"
+                "Nuanced negation of modals: mustn't (prohibition), needn't (lack of necessity), can't (impossibility), won't (refusal), shan't (formal refusal) [🇺🇸→🇬🇧 BrE/AmE: Needn't (modal form) is common especially in BrE: ... → see discrepancies DB #BA-030]"
               ]
             }
           ]
@@ -2412,7 +2694,7 @@
                 "delve into — explore in detail",
                 "devolve upon — pass responsibility to",
                 "disabuse of — free from a misconception",
-                "divest of — take away from",
+                "divest of — take away from [🇺🇸→🇬🇧 BrE/AmE: Dived is the ONLY standard form.... → see discrepancies DB #BA-014]",
                 "eke out — make limited resources last",
                 "emanate from — come from a source",
                 "endear to — make oneself liked",
@@ -2493,24 +2775,63 @@
               ]
             }
           ]
+        },
+        {
+          "category": "Syntax & Sentence Structure",
+          "subs": [
+            {
+              "subcategory": "C2 Syntax — Information Structure & Stylistic Syntax",
+              "description": "Theme/rheme, given/new, marked structures, syntactic choice for effect. Source: Cambridge Grammar, academic syntax references.",
+              "points": [
+                "Information structure: theme (topic, what the sentence is about) vs rheme (comment, what is said about the theme)",
+                "Given-before-new principle: placing familiar/known information before new information for natural flow",
+                "End-focus principle: the most important or new information naturally falls at the end of the clause in English",
+                "End-weight principle: longer, heavier phrases tend to be placed at the end of the sentence (I gave the book to the girl in the red dress who was sitting by the window)",
+                "Marked vs unmarked word order: deviations from SVO for emphasis, contrast, or cohesion (Never have I seen such beauty — marked)",
+                "Left-dislocation: moving a topic to the front with a pronoun copy (That film, I really enjoyed it; John, he's always late)",
+                "Right-dislocation: adding a clarifying NP at the end (He's a nice guy, John; I found it fascinating, that book)",
+                "Passive for information structure: using passive to move the agent to end-focus or to make the patient the theme",
+                "Existential 'there' for introducing new information (There's a man at the door who wants to see you)",
+                "Cleft and pseudo-cleft as information-structuring devices: choosing what to emphasize and what to background",
+                "Ellipsis and substitution for cohesion: omitting recoverable elements (I can [come] if you want me to [come])",
+                "Parallelism for rhetorical effect: matching syntactic structures across phrases/clauses (We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields)",
+                "Syntactic ambiguity: sentences with multiple possible structures (I saw the man with the telescope — ambiguous: I used a telescope / the man had a telescope)",
+                "Stylistic syntax choices: formal vs informal clause structures, academic nominalization vs conversational phrasing"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Punctuation and Capitalization",
+          "subs": [
+            {
+              "subcategory": "C2 Punctuation — Stylistic Choice and Rhetorical Expression",
+              "description": "Punctuation as a stylistic tool, rhetorical effects, professional conventions, dialectical analysis of punctuation choices. Source: Chicago Manual of Style, Cambridge Grammar.",
+              "points": [
+                "Stylistic punctuation: using fragments for rhetorical effect (No. Never. Not in a million years.)",
+                "Stylistic punctuation: dash vs parentheses vs commas — strategic choice based on degree of separation, emphasis, and formality",
+                "Stylistic punctuation: using semicolons for balanced, parallel structures in formal and literary writing (The past is a foreign country; they do things differently there.) [🇺🇸→🇬🇧 BrE/AmE: different TO or FROM: 'This is different to what I... → see discrepancies DB #BA-035]",
+                "Stylistic punctuation: the colon for dramatic anticipation, introducing a punchline, or building suspense (The answer was simple: they had failed to prepare.)",
+                "Ellipsis for stylistic effect: creating suspense, indicating hesitation, trailing off, or suggesting unspoken content",
+                "Punctuation for tone and voice: exclamation marks for enthusiasm vs restraint, dashes for informality and conversational flow",
+                "Parentheses vs dashes vs commas: subtle differences in tone — parentheses are more 'whispered', dashes more emphatic, commas more neutral",
+                "Capitalization for emphasis: using all caps sparingly for very strong emphasis (I will NOT tolerate this) — generally discouraged in formal writing",
+                "Punctuation with bulleted/vertical lists: capitalizing or not, using periods or not, parallel structure requirements",
+                "British vs American punctuation differences: placement of periods/commas inside or outside quotation marks",
+                "British vs American punctuation differences: colon after salutation (Dear Sir:) vs comma (Dear Sir,) or no punctuation",
+                "Professional correspondence punctuation: meaning of comma splice vs semicolon vs period in email and business communication",
+                "Legal and formal document punctuation conventions",
+                "Punctuation in digital/online writing: conventions for text, email, social media, and informal contexts vs formal writing"
+              ]
+            }
+          ]
         }
       ]
     }
   },
   "meta": {
-    "title": "American ESL Grammar Database — US University IEP System",
-    "version": "2.0",
-    "system": "American ESL",
-    "levels_list": [
-      "Level 1",
-      "Level 2",
-      "Level 3",
-      "Level 4",
-      "Level 5",
-      "Level 6"
-    ],
-    "source": "Pearson GSE Grammar Guide 450+ objectives | Azar-Hagen Grammar Series | Troy University, UDEL, ALC IEP Curricula",
-    "structural_grammar_points": 793,
-    "lexical_items": 466
+    "title": "American ESL Grammar Database",
+    "version": "3.1",
+    "system": "American ESL"
   }
 }

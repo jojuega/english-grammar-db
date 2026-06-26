@@ -1207,6 +1207,14 @@
           renderTree();
         }
       });
+
+      // Event delegation: clicks en headers con data-path
+      document.getElementById('treeContainer').addEventListener('click', (e) => {
+        const header = e.target.closest('[data-path]');
+        if (header) {
+          togglePath(header.getAttribute('data-path'));
+        }
+      });
     }
 
     function calculateStats() {
@@ -1439,7 +1447,7 @@
 
               catHtml += `
                 <div class="sub-node">
-                  <div class="sub-header" onclick="togglePath('${subPath}')">
+                  <div class="sub-header" data-path="${subPath}">
                     <span class="chevron-icon ${isSubExpanded ? 'open' : ''}">▶</span>
                     <span class="sub-icon">📋</span>
                     <span class="sub-title">${escapeHtml(sub.subcategory)}</span>
@@ -1465,7 +1473,7 @@
 
             lvlHtml += `
               <div class="cat-node">
-                <div class="cat-header" onclick="togglePath('${catPath}')">
+                <div class="cat-header" data-path="${catPath}">
                   <span class="chevron-icon ${isCatExpanded ? 'open' : ''}">▶</span>
                   <span class="cat-icon">${catIcon}</span>
                   <span class="cat-title">${escapeHtml(cat.category)}</span>
@@ -1491,7 +1499,7 @@
           card.style.setProperty('--level-color-alpha-border', lvlColorAlphaBorder);
           
           card.innerHTML = `
-            <div class="level-header" onclick="togglePath('${lvlPath}')">
+            <div class="level-header" data-path="${lvlPath}">
               <span class="chevron-icon ${isLvlExpanded ? 'open' : ''}">▶</span>
               <span class="level-icon">📊</span>
               <div class="level-title-wrapper">
@@ -1577,7 +1585,7 @@
           card.style.setProperty('--level-color-alpha-border', 'rgba(244, 63, 94, 0.15)');
 
           card.innerHTML = `
-            <div class="level-header" onclick="togglePath('${catPath}')">
+            <div class="level-header" data-path="${catPath}">
               <span class="chevron-icon ${isCatExpanded ? 'open' : ''}">▶</span>
               <span class="level-icon">🔬</span>
               <div class="level-title-wrapper">
